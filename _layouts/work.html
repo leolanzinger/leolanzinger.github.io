@@ -20,9 +20,9 @@
 				<h1>
 					{{ page.fulltitle }}
 				</h1>
-				<span class="tag">
-					{{ page.tag }}
-				</span>
+					{% for item in page.sets %}
+						<span class="tag">{{ item.name }}</span>
+					{% endfor %}
 				{{ content }}
 			</article>
 		</div>

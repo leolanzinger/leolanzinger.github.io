@@ -5,6 +5,9 @@ fulltitle: "zeus"
 date:   2015-12-14 16:16:26 +0100
 category: works
 tag: business
+sets:
+  - name: ux
+  - name: business
 ---
 Out of the several Startup weekends / Hackaton projects I did [Zeus][zeus] is probably the most interesting one. It was developed during a three day Startup Weekend in Berlin in October 2015. 
 

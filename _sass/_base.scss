@@ -96,12 +96,14 @@ header {
         width: 100%;
         color: $brand-color;
         margin-bottom: 0px;
+        font-size: 30px;
     }
     .tag {
         font-size: $base-font-size;
         color: $background-color;
         font-weight: $bold-font-weight;
         margin-bottom: 20px;
+        padding-right: 10px;
         position: relative;
         display: inline-block;
     }
@@ -181,6 +183,24 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-weight: $light-font-weight;
     color: $white;
+}
+
+article {
+    p {
+        img {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 40px;
+        }
+        em {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            font-size: $small-font-size;
+            margin-bottom: 20px;
+        }
+    }
 }
 
 /**

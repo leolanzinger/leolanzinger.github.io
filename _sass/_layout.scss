@@ -32,8 +32,12 @@
 		min-height: 700px;
 	}
 
-	.contact-list li img {
+	#contacts .contact-list li img {
 		width: 48px;
+	}
+
+	#small-contacts .contact-list li img {
+		width: 32px;
 	}
 }
 

@@ -5,9 +5,15 @@ fulltitle: "zapp"
 date:   2015-12-14 16:29:26 +0100
 category: works
 tag: android
+sets:
+  - name: ux
+  - name: android
 ---
 Zapp is an Android email app client that looks and feels quite like Google’s Inbox. It was developed  in 2013 as part of a university Android Development course and, although it may look like a blatant ripoff of Inbox, the app was conceived and produced months before Google’s mail client came out. 
 
 The main concept behind Zapp is that emails can be turned into to-do tasks, and so an email inbox should be nothing more than a to-do list. E-mails that come in are already bound to the to-do screen, and users can swipe them away or add a reminder to get notified at a certain moment about that task. 
+
+[![Zapp video](http://img.youtube.com/vi/iGdvGbCEKGo/0.jpg)](http://www.youtube.com/watch?v=iGdvGbCEKGo)
+*Zapp promo video*
 
 I worked alongside two other classmates as part of the project team. We collaboratively designed the app UX and UI and developed the Android native application. Zapp was never released in production mode to the App Store due to the terrible time sync we had with the Google project. But it was fun.

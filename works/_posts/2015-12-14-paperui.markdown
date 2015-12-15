@@ -5,6 +5,9 @@ fulltitle: "paper ui"
 date:   2015-12-14 16:26:26 +0100
 category: works
 tag: ux
+sets:
+  - name: ux
+  - name: frontend
 ---
 PaperUI turns any paper sheet into a drawable and interactive UI. Users can draw the UI elements on paper, map them and then use them into a real software application. The system relies on the [Leap Motion][leap] to track the movement of the hand while mapping and interacting with the sketched elements.
 

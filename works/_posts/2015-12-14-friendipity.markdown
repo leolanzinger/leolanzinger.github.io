@@ -5,6 +5,8 @@ fulltitle: "friendipity"
 date:   2015-12-14 16:34:26 +0100
 category: works
 tag: android
+sets:
+  - name: android
 ---
 In the summer of 2015 I worked at [belka.us][belka] as Android Developer and UX designer. The main project I worked on was Friendipity, a mobile application that allows users and friends to arrange meet-ups in their free time. 
 

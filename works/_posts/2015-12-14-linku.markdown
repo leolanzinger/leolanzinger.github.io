@@ -5,10 +5,30 @@ fulltitle: "linku"
 date:   2015-12-14 16:36:26 +0100
 category: works
 tag: ux
+sets:
+  - name: ux
+  - name: business
 ---
-LinkU is a mobile application developed in 2015 in Paris for the Business Development Lab course at Université Paris-Sud, where I studied the first year of my Master degree. LinkU is meant to be an easy way to meet new people and enjoy new experiences.
-As part of the project I was in charge of the design at LinkU. Minor tasks included business development and market research in the early phases of the project. 
+LinkU is a mobile application developed in 2015 in Paris for the Business Development Lab course at Université Paris-Sud, where I studied the first year of my Master degree. 
+LinkU is about getting to know people and making new experience: it is indeed a location-based event platform.
+<br />
+I was head of the design at LinkU, but minor tasks also included business development and market research in the early phases of the project. 
 
-The logo design, the UI design and the UX of the app were part of my tasks, as well as the development of [Linku website][linku]. I produced and tested several designs mainly using Sketch. Different iterations of the UI designs were tested using Invision.
+![LinkU screens 1](/images/linku/linku_screens_1.png)
+![LinkU screens 2](/images/linku/linku_screens_2.png)
+*Some screenshots from LinkU*
+
+The interface design went through different iterations, starting from an <span style="color: #00BCD0;">**azure**</span> design and ending up to a much more intense and emotional <span style="color: #F44336;">**red**</span>. 
+<br />
+The whole design was meant to give to the user the most efficient and easy interface to meet new people: rather than searching for the right perfect event, the user interface would prompt the events of the preferred categories that are happening around one user location. 
+<br />
+After all, the motto of the app was **'because moments are around you'**.
+
+![LinkU logo](/images/linku/logo-white.png)
+*The final LinkU logo design*
+
+I also worked on the logo design and the development of [getlinku.com][linku]. The final logo represents a cute hedgehog that is looking outside his den, just like what happens when we move to a new city and we look down the street to meet new friends.
+
+I produced and tested several designs on Sketch and Invision. The design follows the Material Design guidelines.
 
 [linku]: http://www.getlinku.com
