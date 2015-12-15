@@ -1,0 +1,97 @@
+---
+layout: frontpage
+---
+
+<div class="col col-1-1 mobile-col-1-1 no-margin">
+  <div id="portfolio" class="grid no-margin">
+    {% for work in site.categories.works %}
+      <div id="{{ work.title }}" class="col-1-3 mobile-col-1-1 no-margin portfolio-grid">
+        <figure class="effect-honey">
+          <img class="bg" src="/images/boxes/{{ work.title }}.jpg" alt="{{ work.title }}"/>
+          <figcaption>
+            <h2>{{ work.title }}</h2>
+            <i><span class="techs"><img class="icon" src="/icons/{{ work.tag }}.png" /></span></i>
+            <a href="{{ work.url | prepend: site.baseurl }}">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+<!--  
+    <div id="friendipity" class="col-1-3 mobile-col-1-1 no-margin portfolio-grid">
+      <figure class="effect-honey">
+        <img class="bg" src="assets/img/boxes/friendipity.jpg" alt="friendipity"/>
+        <figcaption>
+          <h2>Friendipity </h2>
+          <i><span class="techs"><img class="icon" src="assets/icons/android.png" /></span></i>
+          <a href="#"></a>
+        </figcaption>
+      </figure>
+    </div>
+    <div id="babbies" class="col-1-3 mobile-col-1-1 no-margin portfolio-grid">
+      <figure class="effect-honey">
+        <img class="bg" src="assets/img/boxes/babbies.jpg" alt="babbies production"/>
+        <figcaption>
+          <h2>Babbies</h2>
+          <i><span class="techs"><img class="icon" src="assets/icons/frontend.png" /> + <img class="icon" src="assets/icons/ux.png" /></span></i>
+          <a href="#"></a>
+        </figcaption>
+      </figure>
+    </div>
+    <div id="zapp" class="col-1-3 mobile-col-1-1 no-margin portfolio-grid">
+      <figure class="effect-honey">
+        <img class="bg" src="assets/img/boxes/zapp.png" alt="zapp"/>
+        <figcaption>
+          <h2>Zapp</h2>
+          <i><span class="techs"><img class="icon" src="assets/icons/android.png" /> + <img class="icon" src="assets/icons/ux.png" /></span></i>
+          <a href="#"></a>
+        </figcaption>
+      </figure>
+    </div>
+    <div id="paperui" class="col-1-3 mobile-col-1-1 no-margin portfolio-grid">
+      <figure class="effect-honey">
+        <img class="bg" src="assets/img/boxes/paperui.jpg" alt="paper ui"/>
+        <figcaption>
+          <h2>Paper UI</h2>
+          <i><span class="techs"><img class="icon" src="assets/icons/ux.png" /> + <img class="icon" src="assets/icons/frontend.png" /></span></i>
+          <a href="#"></a>
+        </figcaption>
+      </figure>
+    </div>
+    <div id="zeus" class="col-1-3 mobile-col-1-1 no-margin portfolio-grid">
+      <figure class="effect-honey">
+        <img class="bg" src="assets/img/boxes/zeus.jpg" alt="zeus"/>
+        <figcaption>
+          <h2>Zeus</h2>
+          <i><span class="techs"><img class="icon" src="assets/icons/ux.png" /> + <img class="icon" src="assets/icons/business.png" /></span></i>
+          <a href="#"></a>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
+-->

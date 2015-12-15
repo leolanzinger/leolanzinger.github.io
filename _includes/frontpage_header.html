@@ -1,0 +1,46 @@
+<div class="col col-1-1 mobile-col-1-1 no-margin">
+	<div id="header" class="content">
+		<p>
+			<h1><span class="header-1">Hello, this is Leonardo</span>
+				<span class="header-2">Lanzinger</span></h1>
+			</p>
+			<p class="top-pad bio">
+				<span>
+					I am a <b>Human-Computer Interaction Design</b> master student at TU Berlin. I am a UX designer with a technical computer science background.
+				</span>
+			</p>
+			<p class="bio">
+				<span>
+					I have previously worked as Frontend developer, Android developer and UX designer on several different projects, both freelancing and for a digital agency called <a href="http://www.belka.us">belka.us</a>
+				</span>
+			</p>
+			<ul class="contact-list">
+				{% if site.twitter_username %}
+				<li>
+					{% include icon-twitter.html username=site.twitter_username %}
+				</li>
+				{% endif %}
+				{% if site.github_username %}
+				<li>
+					{% include icon-github.html username=site.github_username %}
+				</li>
+				{% endif %}
+				{% if site.dribbble_username %}
+				<li>
+					{% include icon-dribbble.html username=site.dribbble_username %}
+				</li>
+				{% endif %}
+				{% if site.linkedin_username %}
+				<li>
+					{% include icon-linkedin.html username=site.linkedin_username %}
+				</li>
+				{% endif %}
+				{% if site.email %}
+				<li>
+					{% include icon-email.html email=site.email %}
+				</li>
+				{% endif %}
+			</ul>
+		</div>
+		<!--<canvas id="weather-canvas" width="600" height="400"></canvas>-->
+	</div>

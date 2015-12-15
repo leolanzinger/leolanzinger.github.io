@@ -1,0 +1,39 @@
+<div class="col col-1-1 mobile-col-1-1 no-margin">
+  <div id="small-contacts">
+    <span class="credits">2015, {{ site.title }}</span>
+    <ul class="contact-list">
+      {% if site.twitter_username %}
+      <li>
+        {% include icon-twitter.html username=site.twitter_username %}
+      </li>
+      {% endif %}
+      {% if site.github_username %}
+      <li>
+        {% include icon-github.html username=site.github_username %}
+      </li>
+      {% endif %}
+      {% if site.dribbble_username %}
+      <li>
+        {% include icon-dribbble.html username=site.dribbble_username %}
+      </li>
+      {% endif %}
+      {% if site.linkedin_username %}
+      <li>
+        {% include icon-linkedin.html username=site.linkedin_username %}
+      </li>
+      {% endif %}
+      {% if site.email %}
+      <li>
+        {% include icon-email.html email=site.email %}
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/smoothscroll.js"></script>
+<script>
+    smoothScroll.init();
+</script>

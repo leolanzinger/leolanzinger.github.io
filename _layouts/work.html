@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body class="article">
+	<header class="col col-1-1 mobile-col-1-1 no-margin" style="background: url('/images/boxes/large/{{ page.title }}.jpg'); background-size: cover;">
+		<ul>
+			<li>
+				<a href="{{ site.baseurl }}/">home</a>
+			</li>
+			<li>
+				<a href="{{ site.baseurl }}/#contacts">contacts</a>
+			</li>
+		</ul>
+	</header>
+	<div class="grid">
+		<div class="col col-1-2 push-1-4 mobile-col-1-1">
+			<article>
+				<h1>
+					{{ page.fulltitle }}
+				</h1>
+				<span class="tag">
+					{{ page.tag }}
+				</span>
+				{{ content }}
+			</article>
+		</div>
+	</div>
+	<div class="col col-1-1 mobile-col-1-1 no-margin">
+		<div id="next-previous" class="grid no-margin">
+			{% if page.next.url %}
+			<div class="{% if page.previous.url %}col-1-2  mobile-col-1-2{% else %}col-1-1  mobile-col-1-1{% endif %} no-margin portfolio-grid">
+				<figure>
+					<img class="bg" src="/images/boxes/{{ page.next.title }}.jpg" alt="{{ page.next.title }}"/>
+					<figcaption>
+						<h2>
+							Previous work:
+							<br/>
+							<span class="work-title">{{ page.next.title }}</span>
+						</h2>
+						<a href="{{page.next.url}}">&laquo; {{page.next.title}}</a>
+					</figcaption>
+				</figure>
+			</div>
+			{% endif %}
+			{% if page.previous.url %}
+			<div class="{% if page.next.url %}col-1-2  mobile-col-1-2{% else %}col-1-1  mobile-col-1-1{% endif %} no-margin portfolio-grid">
+				<figure>
+					<img class="bg" src="/images/boxes/{{ page.previous.title }}.jpg" alt="{{ page.previous.title }}"/>
+					<figcaption>
+						<h2>
+							Next work:
+							<br/>
+							<span class="work-title">{{ page.previous.title }}</span>
+						</h2>
+						<a href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+					</figcaption>
+				</figure>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+	<!--
+	<div class="grid next-previous">
+		<div class="col col-1-2 mobile-col-1-2">
+				
+		</div>
+		<div class="col col-1-2 mobile-col-1-2">
+			{% if page.previous.url %}
+				<a href="{{page.previous.url}}">{{page.previous.title}} &raquo;</a>
+			{% endif %}
+		</div>
+	</div>
+-->
+{% include footer.html %}
+</body>
+
+</html>

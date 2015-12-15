@@ -1,0 +1,15 @@
+---
+layout: work
+title:  "zeus"
+fulltitle: "zeus"
+date:   2015-12-14 16:16:26 +0100
+category: works
+tag: business
+---
+Out of the several Startup weekends / Hackaton projects I did [Zeus][zeus] is probably the most interesting one. It was developed during a three day Startup Weekend in Berlin in October 2015. 
+
+Zeus is basically portable-USB-power-banks as a service: local shops (such as bars, 24/7, groceries, tourist info points) act as pick-up and delivery points for USB power banks that can be rented out in one place and returned to another one. During the three days project we developed a business model to market the service and run market researches to validate the product. 
+
+My tasks consisted of business development and UX research.
+
+[zeus]: http://www.getzeus.ml

@@ -1,0 +1,155 @@
+.col {
+	position: relative;
+}
+
+.content {
+	box-sizing: border-box;
+}
+
+.portfolio-grid {
+	box-sizing: border-box;
+	height: 240px;
+}
+
+#weather-canvas {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background-color: transparent;
+	z-index: -1;
+}
+
+.top-pad {
+	padding-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+	.bio {
+		width: 100%;
+	}
+
+	#header {
+		min-height: 700px;
+	}
+
+	.contact-list li img {
+		width: 48px;
+	}
+}
+
+@media screen and (min-width: 767px) {
+	.bio {
+		max-width: 500px;
+	}
+
+	#header {
+		min-height: 600px;
+	}
+	
+	.contact-list li img {
+		width: 32px;
+	}
+}
+
+.box-link {
+	text-decoration: none;
+}
+
+#header {
+	display: block;
+	float: left;
+	padding: 40px;
+	z-index: 99;
+}
+
+#portfolio {
+}
+
+#contacts {
+	width: 100%;
+	min-height: 500px;
+	padding-top: 170px;
+    background-color: $background-color;
+}
+
+#article-header {
+}
+
+.contact-list {
+	float: left;
+	padding-left: 0;
+}
+
+#small-contacts {
+	width: 100%;
+	float: right;
+	height: auto;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0;
+    background-color: $background-color;
+    box-shadow: 0 -1px -3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	.contact-list {
+		float: right;
+	}
+	.credits {
+		color: white;
+		font-size: $small-font-size;
+	}
+}
+
+#contacts {
+	 .contact-list {
+		float: center;
+		text-align: center;
+		padding: 0;
+		margin-bottom: 0;
+	}
+}
+
+.contact-list li {
+	display: inline-block;
+}
+
+.icon {
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+	vertical-align: baseline;
+}
+
+#next-previous {
+	figure {
+		border: none;
+		height: 300px;
+    	background: $text-protection;
+		.bg {
+		    position: relative;
+		    display: block;
+		    min-height: 100%;
+			border-radius: 0;
+			box-shadow: none;
+			opacity: 0.8;
+    		-webkit-transition: opacity 0.35s;
+    		transition: opacity 0.35s;
+		}
+		h2 {
+			font-size: 20px;
+			margin-top: 65px;
+			word-spacing: 0;
+			text-transform: none;
+			.work-title {
+				font-size: 1.3em;
+				font-weight: $base-font-weight;
+			}
+		}
+		&:hover {
+			background: $background-color;
+			.bg {
+    			opacity: 0.5;
+			}
+		}
+	}
+	height: 300px;
+}

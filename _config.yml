@@ -1,0 +1,15 @@
+# Site settings
+title: Leonardo Lanzinger
+email: leonardo.lanzinger@gmail.com
+author: Leonardo Lanzinger
+description: Leonardo Lanzinger personal portfolio website.
+baseurl: "" 
+url: "http://leolanzinger.github.io" # the base hostname & protocol for your site
+twitter_username: leo_lanzinger
+github_username:  leolanzinger
+dribbble_username:
+linkedin_username: leonardolanzinger
+
+
+# Build settings
+markdown: kramdown

@@ -1,0 +1,14 @@
+---
+layout: work
+title:  "linku"
+fulltitle: "linku"
+date:   2015-12-14 16:36:26 +0100
+category: works
+tag: ux
+---
+LinkU is a mobile application developed in 2015 in Paris for the Business Development Lab course at Université Paris-Sud, where I studied the first year of my Master degree. LinkU is meant to be an easy way to meet new people and enjoy new experiences.
+As part of the project I was in charge of the design at LinkU. Minor tasks included business development and market research in the early phases of the project. 
+
+The logo design, the UI design and the UX of the app were part of my tasks, as well as the development of [Linku website][linku]. I produced and tested several designs mainly using Sketch. Different iterations of the UI designs were tested using Invision.
+
+[linku]: http://www.getlinku.com
