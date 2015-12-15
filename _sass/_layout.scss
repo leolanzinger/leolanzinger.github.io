@@ -103,6 +103,12 @@
 	}
 }
 
+@media all and (max-width: $mobile-width) {
+	.credits {
+		font-size: 8px;
+	}
+}
+
 #contacts {
 	 .contact-list {
 		float: center;

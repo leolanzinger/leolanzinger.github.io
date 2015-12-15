@@ -16,4 +16,6 @@ The main concept behind Zapp is that emails can be turned into to-do tasks, and 
 [![Zapp video](http://img.youtube.com/vi/iGdvGbCEKGo/0.jpg)](http://www.youtube.com/watch?v=iGdvGbCEKGo)
 *Zapp promo video*
 
-I worked alongside two other classmates as part of the project team. We collaboratively designed the app UX and UI and developed the Android native application. Zapp was never released in production mode to the App Store due to the terrible time sync we had with the Google project. But it was fun.
+I worked alongside two other classmates as part of the project team. We collaboratively designed the app UX and UI and developed the Android native application. 
+<br />
+Zapp was never released in production mode to the App Store due to the terrible time sync we had with the Google project. But it was fun.
