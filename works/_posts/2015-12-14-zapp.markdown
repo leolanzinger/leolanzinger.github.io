@@ -1,6 +1,6 @@
 ---
 layout: work
-title:  "zapp"
+title:  "Zapp"
 fulltitle: "zapp"
 date:   2015-12-14 16:29:26 +0100
 category: works
@@ -16,6 +16,14 @@ The main concept behind Zapp is that emails can be turned into to-do tasks, and 
 [![Zapp video](http://img.youtube.com/vi/iGdvGbCEKGo/0.jpg)](http://www.youtube.com/watch?v=iGdvGbCEKGo)
 *Zapp promo video*
 
-I worked alongside two other classmates as part of the project team. We collaboratively designed the app UX and UI and developed the Android native application. 
-<br />
+I worked alongside two other classmates as part of the project team. We collaboratively designed the app UX and UI and developed the Android native application. We used the Google Gmail Android library, since the purpose of the project was focused mostly on the UX of the app, and not on the backend technology.
+
+![Zapp product icon](/images/zapp/logo.png)
+*Zapp product icon*
+
+I also designed the product icon: it is a combination of flat-colored triangles that resembles a letter. The inspiration came from the board game called [Tangram][tangram], where the player must place different shapes in a specific order to compose a figure. Since Zapp was all about putting some order into the mailbox, I thought the methaphor stood quite strong.
+
+
 Zapp was never released in production mode to the App Store due to the terrible time sync we had with the Google project. But it was fun.
+
+[tangram]: https://en.wikipedia.org/wiki/Tangram;

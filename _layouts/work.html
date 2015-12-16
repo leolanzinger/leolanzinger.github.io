@@ -4,25 +4,24 @@
 {% include head.html %}
 
 <body class="article">
-	<header class="col col-1-1 mobile-col-1-1 no-margin" style="background: url('/images/boxes/large/{{ page.title }}.jpg'); background-size: cover;">
+	<div class="head-bg">
 		<ul>
 			<li>
-				<a href="{{ site.baseurl }}/">home</a>
-			</li>
-			<li>
-				<a href="{{ site.baseurl }}/#contacts">contacts</a>
+				<a href="{{ site.baseurl }}/">leolanzinger.com</a>
 			</li>
 		</ul>
-	</header>
+		<header class="col col-1-1 mobile-col-1-1 no-margin" style="background: url('/images/boxes/large/{{ page.title }}.jpg'); background-size: cover; background-position: center;">
+		</header>
+	</div>
 	<div class="grid">
 		<div class="col col-1-2 push-1-4 mobile-col-1-1">
 			<article>
 				<h1>
 					{{ page.fulltitle }}
 				</h1>
-					{% for item in page.sets %}
-						<span class="tag">{{ item.name }}</span>
-					{% endfor %}
+				{% for item in page.sets %}
+				<span class="tag">{{ item.name }}</span>
+				{% endfor %}
 				{{ content }}
 			</article>
 		</div>
@@ -39,6 +38,7 @@
 							<br/>
 							<span class="work-title">{{ page.next.title }}</span>
 						</h2>
+						<img class="arrow left" src="/icons/left_arrow.svg" />
 						<a href="{{page.next.url}}">&laquo; {{page.next.title}}</a>
 					</figcaption>
 				</figure>
@@ -54,13 +54,14 @@
 							<br/>
 							<span class="work-title">{{ page.previous.title }}</span>
 						</h2>
-						<a href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-					</figcaption>
-				</figure>
-			</div>
-			{% endif %}
+						<img class="arrow right" src="/icons/right_arrow.svg" />
+					<a href="{{page.previous.url}}">&laquo;{{page.previous.title}}</a>
+				</figcaption>
+			</figure>
 		</div>
+		{% endif %}
 	</div>
+</div>
 	<!--
 	<div class="grid next-previous">
 		<div class="col col-1-2 mobile-col-1-2">

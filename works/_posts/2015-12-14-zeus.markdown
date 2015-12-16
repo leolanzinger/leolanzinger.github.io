@@ -1,6 +1,6 @@
 ---
 layout: work
-title:  "zeus"
+title:  "Zeus"
 fulltitle: "zeus"
 date:   2015-12-14 16:16:26 +0100
 category: works

@@ -12,6 +12,7 @@
     padding: 0;
     float: left;
     width: 100%;
+    overflow: hidden;
     height: 240px;
     border: 10px solid $background-color;
 }
@@ -19,11 +20,15 @@
 .grid figure .bg {
     position: relative;
     display: block;
-    min-height: 100%;
-    width: 100%;
     opacity: 0.8;
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+@media all and (max-width: $mobile-width) {
+    .grid figure .bg {
+        width: 100%;
+    }
 }
 
 .grid figure figcaption {
@@ -108,8 +113,8 @@ figure.effect-honey figcaption::before {
     height: 10px;
     background: $brand-color;
     content: '';
-    -webkit-transform: translate3d(0,10px,0);
-    transform: translate3d(0,10px,0);
+    -webkit-transform: translate(0,10px);
+    transform: translate(0,10px);
 }
 
 figure.effect-honey h2 {
@@ -119,8 +124,8 @@ figure.effect-honey h2 {
     padding: 1em 1.5em;
     width: 100%;
     text-align: left;
-    -webkit-transform: translate3d(0,-30px,0);
-    transform: translate3d(0,-30px,0);
+    -webkit-transform: translate(0,-30px);
+    transform: translate(0,-30px);
 }
 
 figure.effect-honey i {
@@ -131,8 +136,8 @@ figure.effect-honey i {
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(0,30px,0);
-    transform: translate3d(0,30px,0);
+    -webkit-transform: translate(0,30px);
+    transform: translate(0,30px);
 }
 
 figure.effect-honey figcaption::before,
@@ -145,6 +150,6 @@ figure.effect-honey:hover figcaption::before,
 figure.effect-honey:hover h2,
 figure.effect-honey:hover i {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
 }

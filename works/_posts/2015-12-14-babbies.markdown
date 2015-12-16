@@ -1,6 +1,6 @@
 ---
 layout: work
-title:  "babbies"
+title:  "Babbies"
 fulltitle: "babbies production"
 date:   2015-12-14 16:32:26 +0100
 category: works
@@ -12,9 +12,17 @@ sets:
 
 Babbies Production was one of the earliest project I was involved in. I started developing website for friends and bands in 2011, but it wasn’t until 2012 that I took it a bit more seriously. The chance came one day when the local university in Trento was looking for a website developer for their first [TEDx conference][tedx]. I took the chance along with my pal Giulio and - using Babbies Production as the team name - we designed and developed the website. 
 
+![Tedx trento website](/images/babbies/tedx.jpg)
+*A screenshot from TEDxTrento homepage*
+
 The feedback was very positive and so we could book another job: a website for the 2014 annual [ICT event][ictdays] held in the university. By the end of 2014 we also developed a website for a local filmmaker called [Matteo Scotton][matteoscotton]. We also made [I Know A Place][ikap] website, [RESTA srl][resta] and [Teatro Bresci][teatrobresci]. 
 
-All the websites were heavily front-end oriented products such as showcase or event websites. We built on top of Wordpress CMS, which I found very straight-forward and easy customisable to any of our clients requirements.
+![Ict days](/images/babbies/ict.jpg)
+*The frontpage of 2014.ictdays.it*
+
+All the websites were heavily front-end oriented products such as showcase or event websites. We mostly built on top of Wordpress CMS, which I found very straight-forward and easy customisable to any of our clients requirements.
+
+The process usally involved a lot of preparatory talks with the clients, in order to make sure that both of us (and the client) really understood the project. Then we proceeded by designing and developing either the website or, in case we were using Wordpress, a specifically crafted wp theme.
 
 [ikap]: http://www.iknowaplace.it
 [teatrobresci]: http://www.teatrobresci.it

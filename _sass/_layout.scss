@@ -62,11 +62,14 @@
 #header {
 	display: block;
 	float: left;
-	padding: 40px;
+	padding: 20px;
 	z-index: 99;
 }
 
 #portfolio {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
 }
 
 #contacts {
@@ -94,24 +97,42 @@
 	margin: 0;
     background-color: $background-color;
     box-shadow: 0 -1px -3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	.contact-list {
-		float: right;
-	}
 	.credits {
-		color: white;
+		color: $text-color;
 		font-size: $small-font-size;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+
+@media all and (min-width: $mobile-width) {
+	#small-contacts {
+		.contact-list {
+			float: right;
+		}
 	}
 }
 
 @media all and (max-width: $mobile-width) {
 	.credits {
+		width: 100%;
 		font-size: 8px;
+		text-align: center;
+	}
+	#small-contacts {
+		text-align: center !important;
+		.contact-list {
+			display: inline-block;
+			text-align: center;
+			float: none;
+		}
 	}
 }
 
 #contacts {
 	 .contact-list {
-		float: center;
+	 	z-index: 399;
+		width: 100%;
 		text-align: center;
 		padding: 0;
 		margin-bottom: 0;
@@ -133,14 +154,14 @@
 	figure {
 		border: none;
 		height: 300px;
-    	background: $text-protection;
+    	background: $background-color;
 		.bg {
 		    position: relative;
 		    display: block;
 		    min-height: 100%;
 			border-radius: 0;
 			box-shadow: none;
-			opacity: 0.8;
+			opacity: 0.5;
     		-webkit-transition: opacity 0.35s;
     		transition: opacity 0.35s;
 		}
@@ -157,7 +178,24 @@
 		&:hover {
 			background: $background-color;
 			.bg {
-    			opacity: 0.5;
+    			opacity: 0.2;
+			}
+		}
+		.arrow {
+			display: block;
+			height: 54px;
+			position: absolute;
+			top: 120px;
+		}
+		.arrow.left {
+			left: 20%;
+		}
+		.arrow.right {
+			right: 20%;
+		}
+		@media screen and (max-width: $mobile-width) {
+			.arrow {
+				display: none;
 			}
 		}
 	}

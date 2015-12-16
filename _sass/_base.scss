@@ -50,32 +50,34 @@ img {
 /*
     header
 */
-header {
+.head-bg {
     ul {
-        padding-top: 20px;
+        padding-top: 10px;
         padding-left: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+        z-index: 99;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         li {
             font-size: 18px;
             text-align: center;
             margin-right: 10px;
             a {
-                font-weight: $base-font-weight;
+                color: $text-color !important;
+                font-family: $heading-font-family;
+                font-weight: $light-font-weight;
                 &:hover {
                     text-decoration: none;
-                    color: $background-color !important;
+                    color: $white !important;
                 }
                 &:visited {
-                    color: $black;
                 }
             }
-            text-transform: uppercase;
             text-decoration: none;
             display: inline-block;
-            padding: 10px;
         }
     }
 }
-
 /*
     article
 */
@@ -114,6 +116,12 @@ header {
     article {
         margin-bottom: 80px;
         margin-top: 30px;
+    }
+    .head-bg {
+        position: relative;
+
+        display: block;
+        background-color: $background-color;
     }
 }
 
