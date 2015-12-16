@@ -1,6 +1,6 @@
 ---
 layout: work
-title:  "Zapp"
+title:  "zapp"
 fulltitle: "zapp"
 date:   2015-12-14 16:29:26 +0100
 category: works

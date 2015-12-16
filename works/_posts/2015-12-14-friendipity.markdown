@@ -1,6 +1,6 @@
 ---
 layout: work
-title:  "Friendipity"
+title:  "friendipity"
 fulltitle: "friendipity"
 date:   2015-12-14 16:34:26 +0100
 category: works

@@ -1,6 +1,6 @@
 ---
 layout: work
-title:  "Babbies"
+title:  "babbies"
 fulltitle: "babbies production"
 date:   2015-12-14 16:32:26 +0100
 category: works

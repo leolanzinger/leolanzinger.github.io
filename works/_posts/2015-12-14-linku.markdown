@@ -1,6 +1,6 @@
 ---
 layout: work
-title:  "Linku"
+title:  "linku"
 fulltitle: "linku"
 date:   2015-12-14 16:36:26 +0100
 category: works
