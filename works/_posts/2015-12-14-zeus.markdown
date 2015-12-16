@@ -13,6 +13,9 @@ Out of the several Startup weekends / Hackaton projects I did [Zeus][zeus] is pr
 
 Zeus is basically portable-USB-power-banks as a service: local shops (such as bars, 24/7, groceries, tourist info points) act as pick-up and delivery points for USB power banks that can be rented out in one place and returned to another one. During the three days project we developed a business model to market the service and run market researches to validate the product. 
 
-My tasks consisted of business development and UX research.
+![Zeus logo](/images/zeus/zeus_logo.png)
+*the logo*
+
+The brand name and logo play around Zeus - the Greek god - and to the characteristic lighting strikes that he shoots as arrows: the business that we developed was indeed a way to carry electricity around to charge a mobile device.
 
 [zeus]: http://www.getzeus.ml
