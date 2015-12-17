@@ -22,6 +22,9 @@ The feedback was very positive and so we could book another job: a website for t
 
 All the websites were heavily front-end oriented products such as showcase or event websites. We mostly built on top of Wordpress CMS, which I found very straight-forward and easy customisable to any of our clients requirements.
 
+![teatrobresci](/images/babbies/screens_wide.png)
+*Some Babbies Production works*
+
 The process usally involved a lot of preparatory talks with the clients, in order to make sure that both of us (and the client) really understood the project. Then we proceeded by designing and developing either the website or, in case we were using Wordpress, a specifically crafted wp theme.
 
 [ikap]: http://www.iknowaplace.it
