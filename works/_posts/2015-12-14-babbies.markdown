@@ -15,7 +15,7 @@ Babbies Production was one of the earliest project I was involved in. I started 
 ![Tedx trento website](/images/babbies/tedx.jpg)
 *A screenshot from TEDxTrento homepage*
 
-The feedback was very positive and so we could book another job: a website for the 2014 annual [ICT event][ictdays] held in the university. By the end of 2014 we also developed a website for a local filmmaker called [Matteo Scotton][matteoscotton]. We also made [I Know A Place][ikap] website, [RESTA srl][resta] and [Teatro Bresci][teatrobresci]. 
+The feedback was very positive and so we could book another job: a website for the 2014 annual [ICT event][ictdays] held in the university. By the end of 2014 we also developed a website for a local filmmaker called [Matteo Scotton][matteoscotton]. We also made [I Know A Place][ikap] website and [Teatro Bresci][teatrobresci]. 
 
 ![Ict days](/images/babbies/ict.jpg)
 *The frontpage of 2014.ictdays.it*
@@ -26,7 +26,6 @@ The process usally involved a lot of preparatory talks with the clients, in orde
 
 [ikap]: http://www.iknowaplace.it
 [teatrobresci]: http://www.teatrobresci.it
-[resta]: http://www.resta.it
 [tedx]: http://www.tedxtrento.com
 [ictdays]: http://2014.ictdays.it
 [matteoscotton]: http://www.matteoscotton.com
