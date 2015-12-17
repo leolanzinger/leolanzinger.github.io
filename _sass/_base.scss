@@ -49,6 +49,9 @@ h1, h2, h3, h4 {
 img {
     max-width: 100%;
     vertical-align: middle;
+    user-drag: none; 
+    -moz-user-select: none;
+    -webkit-user-drag: none;
 }
 
 /*
@@ -65,11 +68,6 @@ img {
         font-size: $smaller-font-size;
         color: $grey-color-light;
         font-style: italic;
-    }
-    img {
-        user-drag: none; 
-        -moz-user-select: none;
-        -webkit-user-drag: none;
     }
 }
 
