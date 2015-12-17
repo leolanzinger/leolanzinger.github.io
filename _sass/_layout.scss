@@ -198,6 +198,15 @@
 				display: none;
 			}
 		}
+		figcaption {
+			color: $text-color;
+			a {
+				color: $text-color;
+				&:visited {
+					color: $text-color;
+				}
+			}
+		}
 	}
 	height: 300px;
 }
