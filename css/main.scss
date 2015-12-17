@@ -14,6 +14,7 @@ $base-font-weight: 400;
 $bold-font-weight: 600;
 $light-font-weight: 300;
 $small-font-size:  $base-font-size * 0.875;
+$smaller-font-size:  $base-font-size * 0.75;
 $base-line-height: 1.5;
 $small-line-height: 1.2em;
 $big-line-height: 3.5em;
@@ -22,6 +23,7 @@ $spacing-unit:     30px;
 
 $background-color: #22313F;
 $brand-color:      #E64A19;
+$brand-color-lighter:      lighten(#E64A19, 25%);
 $white:				#fff;
 $not-so-white:		#eee;
 $black:				#1b1b1b;

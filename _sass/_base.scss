@@ -39,12 +39,39 @@ h1, h2, h3, h4 {
     font-family: $heading-font-family;
 }
 
+.logo-underline {
+    border-bottom: 2px solid $brand-color;
+}
+
 /**
  * Images
  */
 img {
     max-width: 100%;
     vertical-align: middle;
+}
+
+/*
+    frontpage header
+*/
+.frontpage-header-img {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    width: 55%;
+    figcaption {
+        float: right;
+        margin-right: 20px;
+        font-size: $smaller-font-size;
+        color: $grey-color-light;
+        font-style: italic;
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    .frontpage-header-img {
+        display: none;
+    }
 }
 
 /*
