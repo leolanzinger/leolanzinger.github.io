@@ -145,9 +145,11 @@
 
 .icon {
 	display: inline-block;
-	height: 28px;
-	line-height: 28px;
+	height: 36px;
+	line-height: 36px;
+	padding: 5px;
 	vertical-align: baseline;
+	fill: $text-color;
 }
 
 #next-previous {
