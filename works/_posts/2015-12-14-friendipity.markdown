@@ -15,4 +15,4 @@ I built the Android native application based on the UI designs that the belka.us
 The application is currently being beta tested and is soon to be released publicly to the App store.
 
 [belka]: http://www.belka.us
-[friendipity]: http://www.friendipity.com
+[friendipity]: http://www.frendipity.com
