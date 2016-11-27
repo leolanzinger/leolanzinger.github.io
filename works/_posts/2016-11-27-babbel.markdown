@@ -1,0 +1,30 @@
+---
+layout: work
+title:  "Babbel"
+fulltitle: "Interaction Design Internship at Babbel"
+date:   2016-11-27 19:00:00 +0100
+category: works
+tag: ux
+sets:
+  - name: frontend
+  - name: ux
+---
+
+From March to December 2016 I worked as an Interaction Designer Intern at [Babbel][babbel]. Babbel is a language learning app that is headquartered in Berlin, it is available on smartphone and on the browser in most countries worldwide and has more than 1 million paying subscribers.
+
+![Tedx trento website](/images/babbel/homepage.png)
+*babbel.com*
+
+My internship project was part of the CAT team, a full-stack team which is responsible for the redesign and development of the new Content Authoring Tool used by Babbel Didactics experts to create and manage the learning content of the customer facing app. Specifically, my main task was to redesign the sound recorder part of the CAT application. The sound recorder is a tool that allows voice-over artists to record the audio for words or phrases of a given language. The audio is then used for learning items in the customer app. As well as this main task, I contributed as interaction designer and frontend developer (the app is based on [Angular JS][angular]) for various features of the CAT tool.
+
+The design process followed the User-Centered Design paradigm, by iteratively evaluate proposed prototypes with real users. It started with an analysis of the original version of the software and interviews with real users, to evaluate issues and pain points in the current interaction, and then prototypes were tested at different stages.
+
+![teatrobresci](/images/babbel/setup.jpg)
+*A user testing room at Babbel*
+
+The main issue in this project was not coming up with a usable design, but rather to integrate the required features into the user flow of the new CAT application. Indeed, the CAT tool was already implemented as a first release version when I started my internship project, so my work had to take into account how users already interacted with it.
+
+The first version of the sound recorder went live at the beginning of August and a big user study followed, involving around 50 participants. The tool was then refined according to the user study findings.
+
+[babbel]: http://www.babbel.com
+[angular]: https://angularjs.org/
