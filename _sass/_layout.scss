@@ -49,7 +49,7 @@
 	#header {
 		min-height: 600px;
 	}
-	
+
 	.contact-list li img {
 		width: 32px;
 	}
@@ -77,6 +77,12 @@
 	min-height: 500px;
 	padding-top: 170px;
     background-color: $background-color;
+}
+
+.bio-content {
+	a {
+		text-decoration: underline;
+	}
 }
 
 #article-header {
