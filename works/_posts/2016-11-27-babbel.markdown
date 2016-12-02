@@ -22,9 +22,9 @@ The design process followed the User-Centered Design paradigm, by iteratively ev
 ![user study setup](/images/babbel/setup.jpg)
 *A user testing room at Babbel*
 
-The main issue in this project was not coming up with a usable design, but rather to integrate the required features into the user flow of the new CAT application. Indeed, the CAT tool was already implemented as a first release version when I started my internship project, so my work had to take into account how users already interacted with it.
+The main issue in this project was not to come up with a usable design, but rather to integrate the required features into the user flow of the new CAT application. Indeed, the CAT tool was already implemented as a first release version when I started my internship project, so my work had to take into account how users already interacted with it.
 
-The first version of the sound recorder went live at the beginning of August and a big user study followed, involving around 50 participants. The tool was then refined according to the user study findings.
+The first version of the sound recorder went live at the beginning of August 2016 and a big user study followed, involving around 50 participants. The tool was then refined according to the user study findings.
 
 [babbel]: http://www.babbel.com
 [angular]: https://angularjs.org/
