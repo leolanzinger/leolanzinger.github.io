@@ -13,7 +13,7 @@ sets:
 PaperUI turns any paper sheet into a drawable and interactive UI. Users can draw the UI elements on paper, map them and then use them into a real software application. The system relies on the [Leap Motion][leap] to track the movement of the hand while mapping and interacting with the sketched elements.
 
 
-This software was developed at Université Paris-Sud in 2015 for the Design of Interactive Systems course with three other classmates: [Domonkos Horvath][domi], Martino Giacchetti and Mohamed Osman.
+This software was developed at Université Paris-Sud in 2015 for the Design of Interactive Systems course with three other classmates: [Domonkos Horvath][domi], Martino Giacchetti and [Mohamed Osman][mo].
 
 
 [![Paperui video](http://img.youtube.com/vi/w8KE1EPb26w/0.jpg)](http://www.youtube.com/watch?v=w8KE1EPb26w)
@@ -32,3 +32,4 @@ This project showed us the great potential that the Leap Motion device has, alth
 
 [leap]: http://www.leapmotion.com
 [domi]: http://www.domonkoshorvath.com
+[mo]: http://www.3osman.com

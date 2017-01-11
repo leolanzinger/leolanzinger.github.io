@@ -39,8 +39,11 @@ h1, h2, h3, h4 {
     font-family: $heading-font-family;
 }
 
-.logo-underline {
+.article .logo-underline {
     border-bottom: 2px solid $brand-color;
+    a {
+      text-decoration: none;
+    }
 }
 
 /**
@@ -113,12 +116,14 @@ img {
 */
 .article {
     color: $black;
-    background-color: $white;
+    background-color: $almost-white;
     font-size: $bigger-font-size;
     a {
         color: $black;
+        text-decoration: underline;
         &:hover {
             color: $black;
+            text-decoration: none;
         }
         &:visited {
             color: $black;
@@ -164,6 +169,7 @@ figure > img {
 
 figcaption {
     font-size: $small-font-size;
+    text-transform: none;
 }
 
 
@@ -202,7 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .bio span {
     font-size: $small-line-height;
-    font-weight: $base-font-weight;
+    font-weight: $light-font-weight;
 }
 
 #portfolio-header .header-1 {
@@ -228,7 +234,8 @@ article {
       font-size: $paragraph-font-size;
       line-height: 1.58;
       letter-spacing: -.001em;
-      font-weight: 400;
+      font-weight: $base-font-weight;
+      color: $black;
         img {
             display: block;
             margin: 0 auto;

@@ -1,0 +1,26 @@
+---
+layout: work
+title:  "reemote"
+fulltitle: "Reemote: browse live videos around the internet"
+date:   2017-01-11 18:00:00 +0100
+category: works
+tag: frontend
+sets:
+  - name: frontend
+  - name: ux
+  - name: react
+---
+
+Reemote is a side project built with [Mohamed Osman][mo]. It's a search engine for live video streams on Youtube, Twitch and Periscope. Users are able to search for videos that are currently being streamed live on these platforms and see an aggregate list that allows them to quickly look through multiple platform results and choose the desired live stream.
+
+The website is online and you can check it here: [reemote.herokuapp.com][reemote].
+
+![reemote gif](/images/reemote/live.gif)
+*The main screen of Reemote*
+
+I worked on the design and frontend development of the website, which is build with React. Indeed, it was a really nice way to start learning [React JS][react]. Mohamed worked on the backend of the website. You can check out a nice blogpost about Reeote on [Mohamed's personal blog][mopost].
+
+[mo]: http://www.3osman.com
+[reemote]: http://reemote.herokuapp.com
+[mopost]: https://3osman.com/2016/12/17/reemote-aggregating-live-videos/
+[react]: https://facebook.github.io/react/
