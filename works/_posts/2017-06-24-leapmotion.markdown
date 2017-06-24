@@ -1,6 +1,6 @@
 ---
 layout: work
-title:  "Leap Motion Music Controller"
+title:  "leapmotion music controller"
 fulltitle: "Prototyping of a Leap Motion based music controller"
 date:   2017-01-11 18:00:00 +0100
 category: works
