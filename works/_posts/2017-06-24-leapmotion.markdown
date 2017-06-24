@@ -31,8 +31,10 @@ The user testing encompassed two phases:
 *A qualitative user study*
 
 The bachelor thesis described the results of the two user tests and discusses future improvements of the controller.
-The quantitative tests results showed that user were faster when interacting with one hand, however more precision was reached when interacting with two hands. Volume parameter control though did not report significant differences between the two prototypes.
-The qualitative tests results highlighted an interesting pattern: gestures which required continuous control (such as changing the volume or a continuous parameter of an instrument) had a better perceived usability than gestures which required a triggering input (such as playing one sample or selecting one track). The result showed that haptic feedback may influence the usability of a tool on the basis of the task nature.
+
+The **quantitative tests** results showed that user were faster when interacting with one hand, however more precision was reached when interacting with two hands. Volume parameter control though did not report significant differences between the two prototypes.
+
+The **qualitative tests** results highlighted an interesting pattern: gestures which required continuous control (such as changing the volume or a continuous parameter of an instrument) had a better perceived usability than gestures which required a triggering input (such as playing one sample or selecting one track). The result showed that haptic feedback may influence the usability of a tool on the basis of the task nature.
 
 [leapmotion]: http://www.leapmotion.com
 [processing]: http://www.processing.org
