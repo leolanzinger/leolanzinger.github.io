@@ -2,7 +2,7 @@
 layout: work
 title:  "babbel"
 fulltitle: "Interaction Design Internship at Babbel"
-date:   2016-11-27 19:00:00 +0100
+date:   2017-01-11 19:00:00 +0100
 category: works
 tag: ux
 sets:
