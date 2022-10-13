@@ -30,7 +30,7 @@ const IndexPage = () => {
         </div>
         <div className="box-12 main">
           <p>
-            I held a degree in Computer Science and Human-Computer interaction. When I am not glued to Figma or running user interviews, I produce and record music with <a href="https://open.spotify.com/artist/6M2Pk85GotQvfbYCmWhEme">Bob and the Apple</a> and <a href="https://open.spotify.com/artist/42MCPv6PC71ywUF6cR5uHU">Julia Pígali</a>, playing the bass guitar or the synthesiser.
+            I have a degree in Computer Science and Human-Computer interaction. When I am not glued to Figma or running user interviews, I produce and record music with <a href="https://open.spotify.com/artist/6M2Pk85GotQvfbYCmWhEme">Bob and the Apple</a> and <a href="https://open.spotify.com/artist/42MCPv6PC71ywUF6cR5uHU">Julia Pígali</a>, playing the bass guitar or the synthesiser.
           </p>
         </div>
         <Footer />
