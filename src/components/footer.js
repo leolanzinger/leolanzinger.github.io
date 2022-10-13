@@ -8,8 +8,8 @@ const Footer = () => {
                 Let’s get in touch!
             </h3>
             <a href="mailto:leonardo.lanzinger@gmail.com" className="social-link">Email</a>
-            <a href="https://twitter.com/Leo_Lanzinger" className="social-link">LinkedIn</a>
-            <a href="https://www.linkedin.com/in/leonardolanzinger/" className="social-link">Twitter</a>
+            <a href="https://twitter.com/Leo_Lanzinger" className="social-link">Twitter</a>
+            <a href="https://www.linkedin.com/in/leonardolanzinger/" className="social-link">Linkedin</a>
         </div>
     )
 }
