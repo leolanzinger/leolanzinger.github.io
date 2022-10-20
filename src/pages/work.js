@@ -5,7 +5,7 @@ import "../styles/work.css"
 
 const mainStyles = {
     color: "#222222",
-    fontFamily: "Helvetica Neue, helvetica, sans-serif, serif"
+    fontFamily: "DM Sans, Helvetica Neue, helvetica, sans-serif, serif"
   }
 
 const WorkPage = () => {
@@ -29,7 +29,7 @@ const WorkPage = () => {
                     <h2>The Studio at Zalando</h2>
                     <date>2017-2021</date>
                     <p>
-                        Together with The Studio team, I explored different strategic topics including Zalando’s sustainability digital experience, connecting brick and mortar stores to the Zalando platform and visualising the partnership with Sephora and Nike.
+                        Together with The Studio team, I explored different strategic topics including Zalando’s sustainability digital experience, connecting brick and mortar stores to the Zalando platform and visualising the partnership with Sephora and Nike.<br />
                         Being a bit of a design process geek, I dived into design ops topics and managed the design community methods toolkit, designed the <a href="https://medium.com/zalando-design/zalandos-design-system-contribution-model-73ab36f8591e">design system contribution model</a> and developed a Figma plugin to help colleagues create prototypes faster.
                         During a brief stint in the design system team, I also helped out as a front-end developer.
                     </p>

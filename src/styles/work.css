@@ -7,7 +7,7 @@
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 32px;
     font-weight: 500;
     margin: 0 0 8px 0;
 }
@@ -20,9 +20,10 @@ date {
 }
 
 .work p {
-    font-size: 16px;
+    font-size: 28px;
     line-height: normal;
-    font-weight: 500;
+    font-weight: 400;
+    line-height: 1.4em;
 }
 
 @media screen and (max-width: 880px) {

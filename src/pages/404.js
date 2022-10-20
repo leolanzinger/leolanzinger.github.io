@@ -3,7 +3,7 @@ import "../styles/style.css"
 
 const mainStyles = {
   color: "#222222",
-  fontFamily: "Helvetica Neue, helvetica, sans-serif, serif"
+  fontFamily: "DM Sans, Helvetica Neue, helvetica, sans-serif, serif"
 }
 
 const NotFoundPage = () => {
