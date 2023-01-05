@@ -20,7 +20,7 @@ const WorkPage = () => {
                     <h3 className="no-top-margin">Recommerce at Zalando</h3>
                     <date>2021 - current</date>
                     <p>
-                        As the Senior Product Designer of the team, I am the responsible designer for the experience of Zalando customers who shop and sell second-hand fashion, as well as the experience of customers using Zalando for recycling their old unwearable clothes.
+                        As a Principal Product Designer in the team, I am the responsible designer for the experience of Zalando customers who shop and sell second-hand fashion, as well as the experience of customers using Zalando for recycling their old unwearable clothes.
                     </p>
                     <h3>The Studio at Zalando</h3>
                     <date>2017 - 2021</date>

@@ -19,7 +19,7 @@ const IndexPage = () => {
           <h4>work</h4>
           <p>
             I am a product designer with a passion for user research and design strategy.
-            I work as a Senior Product Designer at Zalando Recommerce, designing experiences for people who buy and sell second-hand fashion.
+            I work as a Principal Product Designer at Zalando Recommerce, designing experiences for people who buy and sell second-hand fashion.
           </p>
           <p>
             Previously, I was part of The Studio at Zalando, a design team with a focus on early stage ideas and strategic design propositions.
