@@ -2,8 +2,9 @@
     grid-gap: 16px;
 }
 
-.main h1 {
+h1.work-header {
     margin: 24px 0 0 0;
+    font-weight: 500;
 }
 
 h2 {
@@ -20,7 +21,7 @@ date {
 }
 
 .work p {
-    font-size: 28px;
+    font-size: 20px;
     line-height: normal;
     font-weight: 400;
     line-height: 1.4em;

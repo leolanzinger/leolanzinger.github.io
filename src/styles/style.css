@@ -1,24 +1,36 @@
 /* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap'); */
 
+@import url('https://use.typekit.net/pyb2jyf.css'); */
+
+
 body {
     margin: 0;
-    background-color: #FAFAFA;
+    background-color: #FEFEFE;
 }
 
 .grid {
     display: grid;
-    grid-template-rows: repeat(6, auto);
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 36px;
-    max-width: 790px;
+    /* max-width: 790px; */
     margin: 0 auto;
-    padding: 32px 0 48px 0;
+    padding: 82px 90px 48px 90px;
+    padding-top: 4%;
 }
 .box-12 {
     grid-column: span 12;
 }
+.box-8 {
+    grid-column: span 8;
+}
+.box-7 {
+    grid-column: span 7;
+}
 .box-6 {
     grid-column: span 6;
+}
+.box-5 {
+    grid-column: span 5;
 }
 .box-4 {
     grid-column: span 4;
@@ -28,6 +40,9 @@ body {
 }
 .box-2 {
     grid-column: span 2;
+}
+.box-1 {
+    grid-column: span 1;
 }
 @media screen and (max-width: 880px) {
     .grid {
@@ -51,29 +66,53 @@ a {
     font-style: italic;
 }
 
+a.no-italics {
+    font-style: normal;
+}
+
 .main h1 {
-    font-weight: 700;
-    font-size: 36px;
+    font-weight: 400;
+    font-size: 70px;
     line-height: normal;
+    max-width: 100%;
     margin: 0;
-    background: -webkit-linear-gradient(45deg,#48082E, #00586B);
+    /*background: -webkit-linear-gradient(45deg,#48082E, #00586B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 100%;
-    width: max-content;
+    width: max-content;*/
+    margin: 0 0 0 0 !important;
+}
+
+.main h4 {
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 16px;
+    margin: 36px 0 26px;
+}
+
+.main h4:first-child {
+    margin: 16px 0;
+}
+
+.main h3 {
+    font-weight: 500;
+}
+
+.title h4 {
+    margin: 16px 0;
+}
+
+h3.no-top-margin {
+    margin-top: 0;
 }
 
 .main p {
     font-weight: 400;
-    font-size: 32px;
+    font-size: 20px;
     line-height: 1.2em;
     margin: 0 0 16px 0;
-}
-
-.social-link {
-    margin-right: 8px;
-    font-size: 18px;
-    font-weight: 400;
+    letter-spacing: 0.05em;
 }
 
 .nav {
@@ -99,11 +138,15 @@ a {
     }
     .main h1 {
         display: inline;
+        font-size: 36px;
+    }
+    .main p {
+        font-size: 24px;
     }
 }
 
 .footer h3 {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 32px;
     line-height: 1.4em;
     margin: 0 0 16px 0;
