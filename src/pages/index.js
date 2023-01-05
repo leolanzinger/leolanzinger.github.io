@@ -4,17 +4,19 @@ import "../styles/style.css"
 
 const mainStyles = {
   color: "#222222",
-  fontFamily: "Helvetica Neue, helvetica, sans-serif, serif"
+  fontFamily: "neue-haas-grotesk-display, helvetica, sans-serif, serif"
 }
 
 const IndexPage = () => {
   return (
-    <main style={mainStyles}>
+    <main style={mainStyles} className="homepage">
       <div className="grid">
-        <div className="box-12 main">
-          <h1>Hi, I am Leonardo Lanzinger!</h1>
+        <div className="box-7 main title">
+          <h1>Leonardo Lanzinger</h1>
+          <h4 className="subtitle">digital product designer</h4>
         </div>
-        <div className="box-12 main">
+        <div className="box-5 main">
+          <h4>work</h4>
           <p>
             I am a product designer with a passion for user research and design strategy.
             I work as a Senior Product Designer at Zalando Recommerce, designing experiences for people who buy and sell second-hand fashion.
@@ -26,17 +28,13 @@ const IndexPage = () => {
           <p>
             Read more about my work <a href="/work">here</a>.
           </p>
-        </div>
-        <div className="box-12 main">
-          <hr/>
-        </div>
-        <div className="box-12 main">
+          <h4>education + music</h4>
           <p>
             I have a degree in Computer Science and Human-Computer Interaction.
             When I am not glued to Figma or running user interviews, I produce and record music with <a href="https://open.spotify.com/artist/6M2Pk85GotQvfbYCmWhEme">Bob and the Apple</a> and <a href="https://open.spotify.com/artist/42MCPv6PC71ywUF6cR5uHU">Julia Pígali</a>, playing the bass guitar and the synthesiser.
           </p>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </main>
   )
