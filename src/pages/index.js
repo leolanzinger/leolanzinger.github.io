@@ -9,11 +9,11 @@ const mainStyles = {
 
 const IndexPage = () => {
   return (
-    <main style={mainStyles}>
+    <main style={mainStyles} className="homepage">
       <div className="grid">
         <div className="box-7 main title">
           <h1>Leonardo Lanzinger</h1>
-          <h4>digital product designer</h4>
+          <h4 className="subtitle">digital product designer</h4>
         </div>
         <div className="box-5 main">
           <h4>work</h4>
@@ -28,7 +28,7 @@ const IndexPage = () => {
           <p>
             Read more about my work <a href="/work">here</a>.
           </p>
-          <h4>education</h4>
+          <h4>education + music</h4>
           <p>
             I have a degree in Computer Science and Human-Computer Interaction.
             When I am not glued to Figma or running user interviews, I produce and record music with <a href="https://open.spotify.com/artist/6M2Pk85GotQvfbYCmWhEme">Bob and the Apple</a> and <a href="https://open.spotify.com/artist/42MCPv6PC71ywUF6cR5uHU">Julia Pígali</a>, playing the bass guitar and the synthesiser.

@@ -26,13 +26,15 @@ const WorkPage = () => {
                     <date>2017 - 2021</date>
                     <p>
                         Together with The Studio team, I explored different strategic topics including Zalando’s sustainability digital experience, connecting brick and mortar stores to the Zalando platform and visualising the partnership with Sephora and Nike.<br />
-                        Being a bit of a design process geek, I dived into design ops topics and managed the design community methods toolkit, designed the <a href="https://medium.com/zalando-design/zalandos-design-system-contribution-model-73ab36f8591e">design system contribution model</a> and developed a Figma plugin to help colleagues create prototypes faster.
-                        During a brief stint in the design system team, I also helped out as a front-end developer.
+                    </p>
+                    <p>
+                        Being a bit of a design process geek, I dived into design ops topics and managed the design community methods toolkit, designed the <a href="https://www.youtube.com/watch?v=uTZAErqLPd8">design system contribution model</a> and developed a Figma plugin to help colleagues create prototypes faster.
+                        During a brief stint in the design system team, I also helped out as a front-end developer to develop the newly designed components.
                     </p>
                     <h3>Babbel</h3>
                     <date>2016</date>
                     <p>
-                        As an interaction designer intern, my responsibility was to redesign the sound recording tool used by language experts to record audio material for Babbel online language courses.
+                        As an interaction designer intern, my responsibility was to redesign the sound recording tool used by language experts to record audio material for Babbel online language courses, integrating it iin a git-based workflow.
                     </p>
                 </div>
                 <div className="box-1"></div>

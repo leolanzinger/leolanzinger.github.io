@@ -2,10 +2,20 @@
 
 @import url('https://use.typekit.net/pyb2jyf.css'); */
 
+html {
+    min-height: 100vh;
+}
 
 body {
     margin: 0;
     background-color: #FEFEFE;
+    min-height: 100vh;
+}
+
+.homepage {
+    display: flex;
+    align-items: center;
+    height: 100vh;
 }
 
 .grid {
@@ -47,7 +57,8 @@ body {
 @media screen and (max-width: 880px) {
     .grid {
         display: block;
-        margin: 0 24px 72px;
+        margin: 0 24px 16px;
+        padding: 82px 16px 48px 16px;
         padding-top: 32px;
     }
     .box-12, .box-6, .box-4, .box-3, .box-2 {
@@ -72,7 +83,7 @@ a.no-italics {
 
 .main h1 {
     font-weight: 400;
-    font-size: 70px;
+    font-size: 5vw;
     line-height: normal;
     max-width: 100%;
     margin: 0;
@@ -86,21 +97,24 @@ a.no-italics {
 
 .main h4 {
     font-weight: 400;
-    font-size: 20px;
-    letter-spacing: 16px;
-    margin: 36px 0 26px;
-}
-
-.main h4:first-child {
-    margin: 16px 0;
+    font-size: 1vw;
+    letter-spacing: 1vw;
+    margin: 2vw 0 26px;
 }
 
 .main h3 {
     font-weight: 500;
+    margin-top: 36px;
 }
 
 .title h4 {
     margin: 16px 0;
+}
+
+.main h4.subtitle {
+    margin-top: 8px;
+    font-size: 1vw;
+    letter-spacing: 1.3vw;
 }
 
 h3.no-top-margin {
@@ -109,7 +123,7 @@ h3.no-top-margin {
 
 .main p {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1vw;
     line-height: 1.2em;
     margin: 0 0 16px 0;
     letter-spacing: 0.05em;
@@ -130,18 +144,36 @@ h3.no-top-margin {
     border-bottom: 1px solid #48082E;
 }
 
-
+/* mobile */
 @media screen and (max-width: 880px) {
+    .homepage {
+        display: flex;
+        align-items: flex-start;
+    }
+
     .social-link {
-        font-size: 24px;
-        margin-right: 16px;
+        font-size: 16px;
     }
     .main h1 {
         display: inline;
-        font-size: 36px;
+        font-size: 42px;
     }
     .main p {
-        font-size: 24px;
+        font-size: 16px;
+    }
+    .main h4 {
+        font-size: 12px;
+        letter-spacing: 12px;
+        margin-top: 36px;
+    }
+    .main h4:first-child {
+        margin-top: 36px;
+    }
+
+    .main h4.subtitle {
+        margin-top: 8px;
+        font-size: 12px;
+        letter-spacing: 12px;
     }
 }
 

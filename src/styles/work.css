@@ -21,7 +21,7 @@ date {
 }
 
 .work p {
-    font-size: 20px;
+    font-size: 1vw;
     line-height: normal;
     font-weight: 400;
     line-height: 1.4em;
@@ -43,6 +43,12 @@ date {
     }
 
     .work p {
-        font-size: 22px;
+        font-size: 16px;
+    }
+
+    .work h4 {
+        font-size: 12px;
+        letter-spacing: 12px;
+        margin-top: 36px;
     }
 }
