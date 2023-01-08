@@ -2,7 +2,6 @@ import * as React from "react"
 import Footer from "../components/footer"
 import AnimationCanvas from "../components/AnimationCanvas";
 import "../styles/style.css"
-import { NONAME } from "dns";
 
 const mainStyles = {
   color: "#222222",
