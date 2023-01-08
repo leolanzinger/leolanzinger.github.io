@@ -33,7 +33,7 @@ const AnimationCanvas = () => {
         mouseUp = true;
         const ball = ballRef.current;
         console.log("current color: ", ball.color);
-        ball.color = colors[Math.floor(Math.random() * 4)];
+        ball.color = colors[Math.floor(Math.random() * 5)];
         console.log("new color: ", ball.color);
         resetBall();
     }
