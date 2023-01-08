@@ -16,6 +16,9 @@ body {
     display: flex;
     align-items: center;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .grid {
@@ -75,6 +78,7 @@ a {
     color: #222222;
     font-weight: 400;
     font-style: italic;
+    pointer-events: all;
 }
 
 a.no-italics {
@@ -182,4 +186,15 @@ h3.no-top-margin {
     font-size: 32px;
     line-height: 1.4em;
     margin: 0 0 16px 0;
+}
+
+/* CANVAS */
+.canvas {
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px) {
+    .canvas {
+        display: none;
+    }
 }

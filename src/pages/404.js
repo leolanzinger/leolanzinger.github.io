@@ -11,10 +11,10 @@ const NotFoundPage = () => {
     <main style={mainStyles}>
       <div className="grid">
         <div className="box-12 main">
-          <a className="nav" href="/">Leonardo Lanzinger</a>
+          <h1>Ups, I can't find what you are looking for!</h1>
         </div>
         <div className="box-12 main">
-          <h1>Ups, can't find what you are looking for!</h1>
+          <a className="no-italics" href="/">Go back</a>
         </div>
       </div>
     </main>
