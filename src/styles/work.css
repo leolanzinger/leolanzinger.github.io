@@ -1,6 +1,8 @@
-.grid {
+/* .grid {
     grid-gap: 16px;
-}
+} */
+
+@import url('https://use.typekit.net/pyb2jyf.css');
 
 h1.work-header {
     margin: 24px 0 0 0;
@@ -13,6 +15,11 @@ h2 {
     margin: 0 0 8px 0;
 }
 
+h3 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
 date {
     display: block;
     font-size: 14px;
@@ -21,10 +28,35 @@ date {
 }
 
 .work p {
-    font-size: 1vw;
+    font-size: 20px;
     line-height: normal;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+caption {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    font-style: italic;
+    text-align: right;
+}
+
+.work h4 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 8px;
+}
+
+.work h4 a {
+    text-decoration: none;
+    font-style: normal;
     font-weight: 400;
-    line-height: 1.4em;
+}
+
+.right-align {
+    text-align: right;
 }
 
 @media screen and (max-width: 880px) {
@@ -51,4 +83,8 @@ date {
         letter-spacing: 12px;
         margin-top: 36px;
     }
+}
+
+img.case-study {
+    width: 100%;
 }
