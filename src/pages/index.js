@@ -1,6 +1,6 @@
 import * as React from "react"
+import { useRef, useEffect, useState } from "react";
 import Footer from "../components/footer"
-import AnimationCanvas from "../components/AnimationCanvas";
 import "../styles/style.css"
 
 const mainStyles = {
@@ -10,10 +10,39 @@ const mainStyles = {
 }
 
 const IndexPage = () => {
+
+  const [svgTopColor, updateSvgTopColor] = useState("rgb(218, 41, 28)");
+  const [svgBottomColor, updateSvgBottomColor] = useState("rgb(82,149,187)");
+
+  let size = {
+    width: 0,
+    height: 0
+  };
+
+  const handleMouseMove = (event) => {
+    updateSvgTopColor("rgb(" +
+      Math.round(event.clientX / size.width * 255) + "," +
+      Math.round(event.clientY / size.height * 255) + "," +
+      // Math.round((event.clientX + event.clientY) / (size.height + size.width) * 255) +
+      "25)");
+    updateSvgBottomColor("rgb(" +
+      Math.round(event.clientX / size.width * 255) + "," +
+      "25," +
+      Math.round((event.clientX + event.clientY) / (size.height + size.width) * 255) +
+      ")");
+  }
+
+  useEffect(() => {
+    size.width = window.innerWidth;
+    size.height = window.innerHeight;
+  });
+
   return (
     <div>
-      {/* <AnimationCanvas /> */}
-      <main style={mainStyles} className="homepage">
+      <main
+        onMouseMove={handleMouseMove}
+        style={mainStyles}
+        className="homepage">
         <div className="grid home-main-grid">
           <div className="box box-6 main title">
             <h1>Leonardo Lanzinger</h1>
@@ -24,11 +53,11 @@ const IndexPage = () => {
                 height="60"
                 viewBox="0 0 60 60"
                 fill="none">
-                <circle cx="30" cy="30" r="30" fill="url(#paint0_linear_118_40)"/>
+                <circle cx="30" cy="30" r="30" fill="url(#paint0_linear_118_40" />
                 <defs>
                   <linearGradient id="paint0_linear_118_40" x1="36" y1="0" x2="36" y2="72" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#DA291C"/>
-                    <stop offset="1" stop-color="#5295BB"/>
+                    <stop stopColor={svgTopColor} />
+                    <stop offset="1" stopColor={svgBottomColor}/>
                   </linearGradient>
                 </defs>
               </svg>
