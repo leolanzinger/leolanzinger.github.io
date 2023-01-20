@@ -18,6 +18,7 @@ h2 {
 h3 {
     font-size: 32px;
     margin-bottom: 8px;
+    letter-spacing: 0.02em;
 }
 
 date {
@@ -46,7 +47,7 @@ caption {
     font-size: 20px;
     margin: 0;
     font-weight: 600;
-    letter-spacing: 8px;
+    letter-spacing: 0.6vw;
 }
 
 .work h4 a {
@@ -75,16 +76,121 @@ caption {
     }
 
     .work p {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .work h4 {
-        font-size: 12px;
-        letter-spacing: 12px;
-        margin-top: 36px;
+        font-size: 20px;
+        letter-spacing: 0.4em;
     }
 }
 
 img.case-study {
     width: 100%;
+}
+
+/* WORK CONTENT */
+.work-main-grid {
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+}
+
+.title-wrapper {
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.work .title-box {
+    padding: 32px;
+}
+
+.work .subtitle-box {
+    padding: 32px;
+    text-align: right;
+}
+
+.grid.work {
+    border-bottom: 1px solid #292929;
+}
+
+.grid.work:last-child {
+    border-bottom: 1px solid #292929;
+    padding-left: 90px;
+}
+
+.work-box {
+    padding-left: 90px;
+}
+
+.work-image {
+    border-right: 1px solid #292929;
+    margin-right: 90px;
+    padding: 32px;
+}
+
+.work-content-wrapper {
+    padding: 32px;
+}
+
+.work-content-wrapper:last-child {
+    border-right: 1px solid #292929;
+}
+
+@media screen and (max-width: 880px) {
+    .work-main-grid {
+        border-top: 1px solid #292929;
+        border-bottom: 1px solid #292929;
+    }
+
+    .title-wrapper {
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-top: 40px;
+    }
+
+    .work .title-box {
+        padding: 0px;
+        margin-bottom: 16px;
+    }
+
+    .work .subtitle-box {
+        padding: 0;
+        text-align: left;
+    }
+
+    .grid.work {
+        border-bottom: 1px solid #292929;
+    }
+
+    .grid.work:last-child {
+        border-bottom: 1px solid #292929;
+        padding-left: 0px;
+    }
+
+    .work-box {
+        padding-left: 0px;
+        margin: 0 24px;
+        border-right: 1px solid #292929;
+        border-left: 1px solid #292929;
+    }
+
+    .work-image {
+        border-right: none;
+        margin-right: 0px;
+        padding: 0 16px 16px 16px;
+        margin-bottom: 0px;
+    }
+
+    .work-content-wrapper {
+        padding: 32px 16px 0px 16px;
+    }
+
+    .work-content-wrapper:last-child {
+        border-right: none;
+    }
+    
+    .footer-wrapper {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 }

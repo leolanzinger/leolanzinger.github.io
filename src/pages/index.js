@@ -14,8 +14,8 @@ const IndexPage = () => {
     <div>
       {/* <AnimationCanvas /> */}
       <main style={mainStyles} className="homepage">
-        <div className="grid border-top border-bottom">
-          <div className="box border-right box-6 main title padding-content">
+        <div className="grid home-main-grid">
+          <div className="box box-6 main title">
             <h1>Leonardo Lanzinger</h1>
             <div className="subtitle-wrapper">
               <svg
@@ -40,9 +40,9 @@ const IndexPage = () => {
               </h4>
             </div>
           </div>
-          <div className="box-6 main">
-            <div className="border-bottom padding-right">
-              <div className="border-right padding-content">
+          <div className="box-6 main content">
+            <div className="content-box-wrapper">
+              <div className="content-box">
                 <h4>work</h4>
                 <p>
                   I am a product designer with a passion for user research and design strategy.
@@ -57,8 +57,8 @@ const IndexPage = () => {
                 </p>
               </div>
             </div>
-            <div className="border-bottom padding-right">
-              <div className="border-right padding-content">
+            <div className="content-box-wrapper">
+              <div className="content-box">
                 <h4>education + music</h4>
                 <p>
                   I have a bachelor degree in Computer Science and a master in Human-Computer Interaction Design.
@@ -66,8 +66,8 @@ const IndexPage = () => {
                 </p>
               </div>
             </div>
-            <div className="padding-right">
-              <div className="border-right padding-content">
+            <div className="content-box-wrapper">
+              <div className="content-box">
                 <Footer />
               </div>
             </div>

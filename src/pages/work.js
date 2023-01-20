@@ -14,22 +14,22 @@ const mainStyles = {
 const WorkPage = () => {
     return (
         <main style={mainStyles}>
-            <div className="grid work border-top border-bottom">
-              <div className="box-12 padding-left padding-right">
+            <div className="grid work work-main-grid">
+              <div className="box-12 title-wrapper">
                 <div className="grid">
-                  <div className="box-6 padding-content">
+                  <div className="box-6 title-box">
                     <h4>work</h4>
                   </div>
-                  <div className="box-6 padding-content right-align">
+                  <div className="box-6 subtitle-box">
                     <h4><a href="/">Leonardo Lanzinger</a></h4>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="grid work border-bottom">
-              <div className="box-12 padding-left">
+            <div className="grid work">
+              <div className="box-12 work-box">
                 <div className="grid">
-                  <div className="box-5 padding-content">
+                  <div className="box-5 work-content-wrapper">
                     <h3 className="no-top-margin">Recommerce at Zalando</h3>
                     <date>2021 - current</date>
                     <p>
@@ -40,16 +40,16 @@ const WorkPage = () => {
                     </p>
                   </div>
                   <div className="box-1 border-right"></div>
-                  <div className="box-6 padding-content margin-right border-right">
+                  <div className="box-6 work-image">
                     <img src={recomImage} alt="recommerce" className="case-study" />
                   </div>
                 </div>
               </div>
             </div>
-            <div className="grid work border-bottom">
-              <div className="box-12 padding-left">
+            <div className="grid work">
+              <div className="box-12 work-box">
                 <div className="grid">
-                  <div className="box-5 padding-content">
+                  <div className="box-5 work-content-wrapper">
                     <h3 className="no-top-margin">The Studio at Zalando</h3>
                     <date>2017 - 2021</date>
                     <p>
@@ -61,7 +61,7 @@ const WorkPage = () => {
                     </p>
                   </div>
                   <div className="box-1 border-right"></div>
-                  <div className="box-6 padding-content margin-right border-right">
+                  <div className="box-6 work-image">
                     <img src={studioImage} alt="thestudio" className="case-study" />
                     <caption>
                       Some Zalando projects I worked on between 2017 and 2021.
@@ -72,10 +72,10 @@ const WorkPage = () => {
                 </div>
               </div>
             </div>
-            <div className="grid work border-bottom">
-              <div className="box-12 padding-left">
+            <div className="grid work">
+              <div className="box-12 work-box">
                 <div className="grid">
-                  <div className="box-5 padding-content">
+                  <div className="box-5 work-content-wrapper">
                     <h3 className="no-top-margin">Babbel</h3>
                     <date>2016</date>
                     <p>
@@ -83,14 +83,14 @@ const WorkPage = () => {
                     </p>
                   </div>
                   <div className="box-1 border-right"></div>
-                  <div className="box-6 padding-content margin-right border-right">
+                  <div className="box-6 work-image">
                     <img src={babbelImage} alt="babbel" className="case-study" />
                   </div>
                 </div>
               </div>
             </div>
-            <div className="grid work border-bottom padding-left">
-              <div className="box-12 border-right padding-content">
+            <div className="grid work">
+              <div className="box-12 work-content-wrapper footer-wrapper">
                 <Footer />
               </div>
             </div>
