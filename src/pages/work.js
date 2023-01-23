@@ -33,10 +33,10 @@ const WorkPage = () => {
                     <h3 className="no-top-margin">Recommerce at Zalando</h3>
                     <date>2021 - current</date>
                     <p>
-                    As Principal Product Designer, I worked on the customer experience of Zalando customers who shop and sell second-hand fashion, as well as the experience of customers using Zalando for recycling their old unwearable clothes.
+                    As Principal Product Designer, I am responsible for the customer experience of Zalando customers who shop and sell second-hand fashion, as well as the experience of customers using Zalando for recycling their old unwearable clothes.
                     </p>
                     <p>
-                    Past and ongoing projects include: leading user research to identify strategic opportunities in the overall customer journey, product design work on the existing second-hand service as well as on an upcoming recycling service and workshops facilitation.
+                    Past and ongoing projects include: leading user research to identify strategic opportunities in the overall customer journey, product design work on new second-hand reselling and recycling services and workshops facilitation.
                     </p>
                   </div>
                   <div className="box-1 border-right"></div>
