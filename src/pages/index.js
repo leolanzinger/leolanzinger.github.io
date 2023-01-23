@@ -75,11 +75,11 @@ const IndexPage = () => {
                 <h4>work</h4>
                 <p>
                   I am a product designer with a passion for user research and design strategy.
-                  I work as a Principal Product Designer at Zalando Recommerce, designing experiences for people who buy and sell second-hand fashion.
+                  I work as a Principal Product Designer at Zalando, the leading fashion ecommerce platform in Europe, designing experiences for people who buy and sell second-hand fashion online.
                 </p>
                 <p>
                   Previously, I was part of The Studio at Zalando, a design team with a focus on early stage ideas and strategic design propositions.
-                  I also worked for Babbel in Berlin and Belka in Trento, Italy.
+                  Before that, I was an Interaction Designer intern at Babbel, in Berlin.
                 </p>
                 <p>
                   Read more about my work <a href="/work">here</a>.
