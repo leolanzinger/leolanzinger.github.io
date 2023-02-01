@@ -29,10 +29,17 @@ date {
 }
 
 .work p {
+    font-size: 26px;
+    line-height: normal;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+
+.work ol, .work ul {
     font-size: 20px;
     line-height: normal;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
 }
 
 caption {
@@ -47,13 +54,14 @@ caption {
     font-size: 20px;
     margin: 0;
     font-weight: 600;
-    letter-spacing: 0.6vw;
+    letter-spacing: -2%;
+    text-transform: capitalize;
 }
 
 .work h4 a {
-    text-decoration: none;
+    text-decoration: underline;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .right-align {
@@ -81,7 +89,7 @@ caption {
 
     .work h4 {
         font-size: 20px;
-        letter-spacing: 0.4em;
+        letter-spacing: -2%;
     }
 }
 
@@ -90,10 +98,6 @@ img.case-study {
 }
 
 /* WORK CONTENT */
-.work-main-grid {
-    border-top: 1px solid #292929;
-    border-bottom: 1px solid #292929;
-}
 
 .title-wrapper {
     padding-left: 90px;
@@ -105,17 +109,24 @@ img.case-study {
 }
 
 .work .subtitle-box {
-    padding: 32px;
+    padding: 32px 0px 32px 32px;
     text-align: right;
 }
 
 .grid.work {
+}
+
+.grid.work-border {
     border-bottom: 1px solid #292929;
 }
 
 .grid.work:last-child {
     border-bottom: 1px solid #292929;
     padding-left: 90px;
+}
+
+.work-main-grid {
+    border-bottom: none;
 }
 
 .work-box {
@@ -137,15 +148,11 @@ img.case-study {
 }
 
 @media screen and (max-width: 880px) {
-    .work-main-grid {
-        border-top: 1px solid #292929;
-        border-bottom: 1px solid #292929;
-    }
-
     .title-wrapper {
         padding-left: 40px;
         padding-right: 40px;
         margin-top: 40px;
+        margin-bottom: 0;
     }
 
     .work .title-box {
@@ -156,11 +163,13 @@ img.case-study {
     .work .subtitle-box {
         padding: 0;
         text-align: left;
+        margin-bottom: 8px;
     }
 
-    .grid.work {
+    .grid.work-border {
         border-bottom: 1px solid #292929;
     }
+    
 
     .grid.work:last-child {
         border-bottom: 1px solid #292929;
@@ -170,8 +179,7 @@ img.case-study {
     .work-box {
         padding-left: 0px;
         margin: 0 24px;
-        border-right: 1px solid #292929;
-        border-left: 1px solid #292929;
+        /* border-right: 1px solid #292929; */
     }
 
     .work-image {
@@ -192,5 +200,47 @@ img.case-study {
     .footer-wrapper {
         padding-left: 40px;
         padding-right: 40px;
+    }
+}
+
+/* PORTFOLIO */
+.portfolio-content-wrapper {
+    padding: 32px 120px;
+}
+
+.portfolio-content-wrapper p {
+    max-width: 980px;
+}
+
+.portfolio-content-wrapper ol, .portfolio-content-wrapper ul {
+    max-width: 940px;
+}
+
+.portfolio-content-wrapper h2 {
+    margin-top: 64px;
+    font-size: 48px;
+}
+
+.gatsby-resp-image-wrapper {
+    margin-left: 0 !important;
+}
+
+.portfolio-content-wrapper figcaption p {
+    font-size: 12px;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 880px) {
+    .portfolio-content-wrapper {
+        padding: 32px;
+    }
+
+    .portfolio-content-wrapper p, .portfolio-content-wrapper ol, .portfolio-content-wrapper ul {
+        max-width: 100%;
+    }
+
+    .portfolio-content-wrapper h2 {
+        margin-top: 32px;
+        font-size: 32px;
     }
 }

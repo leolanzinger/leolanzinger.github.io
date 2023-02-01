@@ -1,18 +1,23 @@
-import * as React from "react"
+import * as React from "react";
 import { useRef, useEffect, useState } from "react";
-import Footer from "../components/footer"
-import "../styles/style.css"
+import Footer from "../components/footer";
+import "../styles/style.css";
 
 const mainStyles = {
   color: "#292929",
   fontFamily: "neue-haas-grotesk-display, helvetica, sans-serif, serif",
   // pointerEvents: "none"
-}
+};
 
 const IndexPage = () => {
 
   const [svgTopColor, updateSvgTopColor] = useState("rgb(218, 41, 28)");
   const [svgBottomColor, updateSvgBottomColor] = useState("rgb(82,149,187)");
+  const [svgCorner, updateSvgCorner] = useState(10);
+  const [svgWidth, updateSvgWidth] = useState(60);
+  const [isMobile, setMobile] = useState(false);
+  const [animationBorderDirection, setanimationBorderDirection] = useState(true);
+  const [animationGrowthDirection, setanimationGrowthDirection] = useState(true);
 
   let size = {
     width: 0,
@@ -20,21 +25,48 @@ const IndexPage = () => {
   };
 
   const handleMouseMove = (event) => {
+    updateSvgCorner(event.clientX / size.width * 35);
     updateSvgTopColor("rgb(" +
-      Math.round(event.clientX / size.width * 255) + "," +
-      Math.round(event.clientY / size.height * 255) + "," +
-      // Math.round((event.clientX + event.clientY) / (size.height + size.width) * 255) +
-      "25)");
+      Math.round(size.height / event.clientY * 218) + "," +
+      Math.round(size.height / event.clientY * 41) + "," +
+      "28)");
     updateSvgBottomColor("rgb(" +
-      Math.round(event.clientX / size.width * 255) + "," +
-      "25," +
-      Math.round((event.clientX + event.clientY) / (size.height + size.width) * 255) +
+      Math.round(event.clientY / size.height * 82) + "," +
+      "149," +
+      Math.round(event.clientY / size.height * 187) +
       ")");
+  };
+
+  const updateIllustration = () => {
+    const borderValue = animationBorderDirection ? svgCorner + 0.5 : svgCorner - 0.5;
+    // const widthValue = animationGrowthDirection ? svgWidth + 1 : svgWidth - 1;
+    if (svgCorner == 35) {
+      setanimationBorderDirection(false);
+    }
+    if (svgCorner == 1) {
+      setanimationBorderDirection(true);
+    }
+    if (svgWidth == 200) {
+      setanimationGrowthDirection(false);
+    }
+    if (svgWidth == 61) {
+      setanimationGrowthDirection(true);
+    }
+    updateSvgCorner(borderValue);
+    // updateSvgWidth(widthValue);
+    window.requestAnimationFrame(updateIllustration);
   }
 
   useEffect(() => {
     size.width = window.innerWidth;
     size.height = window.innerHeight;
+    if (size.width < 848) {
+      setMobile(true);
+      window.requestAnimationFrame(updateIllustration);
+    }
+    else {
+      setMobile(false);
+    }
   });
 
   return (
@@ -44,65 +76,46 @@ const IndexPage = () => {
         style={mainStyles}
         className="homepage">
         <div className="grid home-main-grid">
-          <div className="box box-6 main title">
-            <h1>Leonardo Lanzinger</h1>
-            <div className="subtitle-wrapper">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="60"
-                height="60"
-                viewBox="0 0 60 60"
-                fill="none">
-                <circle cx="30" cy="30" r="30" fill="url(#paint0_linear_118_40" />
-                <defs>
-                  <linearGradient id="paint0_linear_118_40" x1="36" y1="0" x2="36" y2="72" gradientUnits="userSpaceOnUse">
-                    <stop stopColor={svgTopColor} />
-                    <stop offset="1" stopColor={svgBottomColor}/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <h4 className="subtitle">
-                digital
-                <br />
-                product
-                <br />designer
-              </h4>
-            </div>
+          <div className="box-2"></div>
+          <div className="box-1 canvas">
+            <svg
+              className="illustration"
+              xmlns="http://www.w3.org/2000/svg"
+              width={svgWidth + 16}
+              height="76"
+              viewBox={`0 0 ${svgWidth + 16} 76`}
+              fill="none">
+              {/* <circle cx="30" cy="30" r="30" fill="url(#paint0_linear_118_40" /> */}
+              <rect x="6" y="6" rx={svgCorner} ry={svgCorner} width={svgWidth} height="60" fill="transparent" strokeWidth="8" stroke="url(#paint0_linear_118_40" />
+              <defs>
+                <linearGradient id="paint0_linear_118_40" x1="36" y1="0" x2="36" y2="72" gradientUnits="userSpaceOnUse">
+                  <stop stopColor={svgTopColor} />
+                  <stop offset="1" stopColor={svgBottomColor}/>
+                </linearGradient>
+              </defs>
+            </svg>
           </div>
-          <div className="box-6 main content">
-            <div className="content-box-wrapper">
-              <div className="content-box">
-                <h4>work</h4>
-                <p>
-                  I am a product designer with a passion for user research and design strategy.
-                  I work as a Principal Product Designer at Zalando, the leading fashion ecommerce platform in Europe, designing experiences for people who buy and sell second-hand fashion online.
-                </p>
-                <p>
-                  Previously, I was part of The Studio at Zalando, a design team with a focus on early stage ideas and strategic design propositions.
-                  Before that, I was an Interaction Designer intern at Babbel, in Berlin.
-                </p>
-                <p>
-                  Read more about my work <a href="/work">here</a>.
-                </p>
-              </div>
-            </div>
-            <div className="content-box-wrapper">
-              <div className="content-box">
-                <h4>education + music</h4>
-                <p>
-                  I have a bachelor degree in Computer Science and a master in Human-Computer Interaction Design.
-                  When I am not glued to Figma or running user interviews, I produce and record music with <a href="https://open.spotify.com/artist/6M2Pk85GotQvfbYCmWhEme">Bob and the Apple</a> and <a href="https://open.spotify.com/artist/42MCPv6PC71ywUF6cR5uHU">Julia Pígali</a>, playing the bass guitar and the synthesiser.
-                </p>
-              </div>
-            </div>
-            <div className="content-box-wrapper">
-              <div className="content-box">
-                <Footer />
-              </div>
-            </div>
+          <div className="box box-7 main">
+            <h2>Leonardo Lanzinger</h2>
+            <h1>Digital Product Designer</h1>
+            <p>
+              I am a designer with a focus on user research and product strategy. I work as Principal Product Designer at Zalando in Berlin.
+            </p>
+            <p>
+              My background is Computer Science and Human-Computer Interaction — and my guilty pleasures are React.js and the double diamond process.
+            </p>
+            <p>
+              Read more about my work <a href="/work">here</a>.
+            </p>
           </div>
         </div>
       </main>
+      <div
+        style={mainStyles} className="contacts-wrapper">
+        <a href="mailto:leonardo.lanzinger@gmail.com" className="social-link">Email</a>
+        <a href="https://twitter.com/Leo_Lanzinger" className="social-link">Twitter</a>
+        <a href="https://www.linkedin.com/in/leonardolanzinger/" className="social-link">Linkedin</a>
+      </div>
     </div>
   )
 }

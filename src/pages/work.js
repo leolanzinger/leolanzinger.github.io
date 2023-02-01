@@ -1,5 +1,4 @@
 import * as React from "react"
-import Footer from "../components/footer"
 import "../styles/style.css"
 import "../styles/work.css"
 import recomImage from "../images/recom.png"
@@ -26,10 +25,10 @@ const WorkPage = () => {
                 </div>
               </div>
             </div>
-            <div className="grid work">
+            <div className="grid work work-border">
               <div className="box-12 work-box">
                 <div className="grid">
-                  <div className="box-5 work-content-wrapper">
+                  <div className="box-6 work-content-wrapper">
                     <h3 className="no-top-margin">Recommerce at Zalando</h3>
                     <date>2021 - current</date>
                     <p>
@@ -39,17 +38,17 @@ const WorkPage = () => {
                     Past and ongoing projects include: leading user research to identify strategic opportunities in the overall customer journey, product design work on new second-hand reselling and recycling services and workshops facilitation.
                     </p>
                   </div>
-                  <div className="box-1 border-right"></div>
+                  {/* <div className="box-1"></div> */}
                   <div className="box-6 work-image">
                     <img src={recomImage} alt="recommerce" className="case-study" />
                   </div>
                 </div>
               </div>
             </div>
-            <div className="grid work">
+            <div className="grid work work-border">
               <div className="box-12 work-box">
                 <div className="grid">
-                  <div className="box-5 work-content-wrapper">
+                  <div className="box-6 work-content-wrapper">
                     <h3 className="no-top-margin">The Studio at Zalando</h3>
                     <date>2017 - 2021</date>
                     <p>
@@ -60,7 +59,7 @@ const WorkPage = () => {
                       During a brief stint in the design system team, I also helped out as a front-end developer to develop the newly designed components.
                     </p>
                   </div>
-                  <div className="box-1 border-right"></div>
+                  {/* <div className="box-1"></div> */}
                   <div className="box-6 work-image">
                     <img src={studioImage} alt="thestudio" className="case-study" />
                     <caption>
@@ -72,26 +71,31 @@ const WorkPage = () => {
                 </div>
               </div>
             </div>
-            <div className="grid work">
+            <div className="grid work work-border">
               <div className="box-12 work-box">
                 <div className="grid">
-                  <div className="box-5 work-content-wrapper">
+                  <div className="box-6 work-content-wrapper">
                     <h3 className="no-top-margin">Babbel</h3>
                     <date>2016</date>
                     <p>
                     As an interaction designer intern, I redesigned the sound recording tool used by language experts to record audio material for Babbel online language courses, integrating it in a git-based CAT tool.
                     </p>
                   </div>
-                  <div className="box-1 border-right"></div>
+                  {/* <div className="box-1"></div> */}
                   <div className="box-6 work-image">
                     <img src={babbelImage} alt="babbel" className="case-study" />
                   </div>
                 </div>
               </div>
             </div>
-            <div className="grid work">
+            <div className="grid work work-border">
               <div className="box-12 work-content-wrapper footer-wrapper">
-                <Footer />
+                <div className="footer">
+                    <h4>contacts</h4>
+                    <p>
+                        <a href="mailto:leonardo.lanzinger@gmail.com" className="social-link">Email</a> / <a href="https://twitter.com/Leo_Lanzinger" className="social-link">Twitter</a> / <a href="https://www.linkedin.com/in/leonardolanzinger/" className="social-link">Linkedin</a>
+                    </p>
+                </div>
               </div>
             </div>
         </main>
