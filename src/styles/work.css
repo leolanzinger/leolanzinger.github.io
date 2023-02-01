@@ -114,6 +114,7 @@ img.case-study {
 }
 
 .grid.work {
+    position: relative;
 }
 
 .grid.work-border {
@@ -121,8 +122,8 @@ img.case-study {
 }
 
 .grid.work:last-child {
-    border-bottom: 1px solid #292929;
-    padding-left: 90px;
+    /* border-bottom: 1px solid #292929; */
+    /* padding-left: 90px; */
 }
 
 .work-main-grid {
@@ -149,8 +150,8 @@ img.case-study {
 
 @media screen and (max-width: 880px) {
     .title-wrapper {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
         margin-top: 40px;
         margin-bottom: 0;
     }
@@ -172,7 +173,7 @@ img.case-study {
     
 
     .grid.work:last-child {
-        border-bottom: 1px solid #292929;
+        /* border-bottom: 1px solid #292929; */
         padding-left: 0px;
     }
 
@@ -185,12 +186,12 @@ img.case-study {
     .work-image {
         border-right: none;
         margin-right: 0px;
-        padding: 0 16px 16px 16px;
+        padding: 0 0 16px 0;
         margin-bottom: 0px;
     }
 
     .work-content-wrapper {
-        padding: 32px 16px 0px 16px;
+        padding: 32px 0px 0px 0px;
     }
 
     .work-content-wrapper:last-child {
@@ -242,5 +243,16 @@ img.case-study {
     .portfolio-content-wrapper h2 {
         margin-top: 32px;
         font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 881px) {
+    .work-contacts {
+        position: relative;
+        float: right;
+        width: 100%;
+        padding-right: 90px;
+        margin-bottom: 24px;
+        right: 0;
     }
 }

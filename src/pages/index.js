@@ -99,7 +99,7 @@ const IndexPage = () => {
             <h2>Leonardo Lanzinger</h2>
             <h1>Digital Product Designer</h1>
             <p>
-              I am a designer with a focus on user research and product strategy. I work as Principal Product Designer at Zalando in Berlin.
+              I am a designer with a focus on user research and product strategy. I am based in Berlin and I work as Principal Product Designer at Zalando, the leading European fashion ecommerce serving 50M customers yearly.
             </p>
             <p>
               My background is Computer Science and Human-Computer Interaction — and my guilty pleasures are React.js and the double diamond process.
