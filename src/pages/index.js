@@ -99,22 +99,25 @@ const IndexPage = () => {
             <h2>Leonardo Lanzinger</h2>
             <h1>Digital Product Designer</h1>
             <p>
-              I am a designer with a focus on user research and product strategy. I am based in Berlin and I work as Principal Product Designer at Zalando, the leading European fashion ecommerce serving 50M customers yearly.
+              I am a designer with a focus on user research and design strategy. I am based in Berlin and I work as Principal Product Designer at Zalando, currently focusing on the circular second-hand proposition for Zalando's 50 million customers.
             </p>
             <p>
               My background is Computer Science and Human-Computer Interaction — and my guilty pleasures are React.js and the double diamond process.
             </p>
             <p>
-              Read more about my work <a href="/work">here</a>.
+              Read more about my work experience <a href="/work">here</a>.
             </p>
           </div>
         </div>
       </main>
       <div
         style={mainStyles} className="contacts-wrapper">
-        <a href="mailto:leonardo.lanzinger@gmail.com" className="social-link">Email</a>
-        <a href="https://twitter.com/Leo_Lanzinger" className="social-link">Twitter</a>
-        <a href="https://www.linkedin.com/in/leonardolanzinger/" className="social-link">Linkedin</a>
+        <a href="about">About</a>
+        <div className="contact-links">
+          <a href="mailto:leonardo.lanzinger@gmail.com" className="social-link">Email</a>
+          <a href="https://twitter.com/Leo_Lanzinger" className="social-link">Twitter</a>
+          <a href="https://www.linkedin.com/in/leonardolanzinger/" className="social-link">Linkedin</a>
+        </div>
       </div>
     </div>
   )

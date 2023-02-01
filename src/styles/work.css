@@ -245,14 +245,3 @@ img.case-study {
         font-size: 32px;
     }
 }
-
-@media screen and (min-width: 881px) {
-    .work-contacts {
-        position: relative;
-        float: right;
-        width: 100%;
-        padding-right: 90px;
-        margin-bottom: 24px;
-        right: 0;
-    }
-}

@@ -98,9 +98,12 @@ const WorkPage = () => {
         </main>
         <div
           style={mainStyles} className="contacts-wrapper work-contacts">
-          <a href="mailto:leonardo.lanzinger@gmail.com" className="social-link">Email</a>
-          <a href="https://twitter.com/Leo_Lanzinger" className="social-link">Twitter</a>
-          <a href="https://www.linkedin.com/in/leonardolanzinger/" className="social-link">Linkedin</a>
+           <a href="/">Leonardo Lanzinger</a>
+          <div className="contact-links">
+            <a href="mailto:leonardo.lanzinger@gmail.com" className="social-link">Email</a>
+            <a href="https://twitter.com/Leo_Lanzinger" className="social-link">Twitter</a>
+            <a href="https://www.linkedin.com/in/leonardolanzinger/" className="social-link">Linkedin</a>
+          </div>
         </div>
       </div>
   )
