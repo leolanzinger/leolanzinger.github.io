@@ -6,7 +6,7 @@ import "../styles/style.css";
 const mainStyles = {
   color: "#292929",
   fontFamily: "neue-haas-grotesk-display, helvetica, sans-serif, serif",
-  // pointerEvents: "none"
+  boxSizing: "border-box"
 };
 
 const IndexPage = () => {

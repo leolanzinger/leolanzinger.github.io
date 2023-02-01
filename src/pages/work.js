@@ -8,7 +8,8 @@ import babbelImage from "../images/babbel.png";
 
 const mainStyles = {
     color: "#222222",
-    fontFamily: "neue-haas-grotesk-display, Helvetica Neue, helvetica, sans-serif, serif"
+    fontFamily: "neue-haas-grotesk-display, Helvetica Neue, helvetica, sans-serif, serif",
+    boxSizing: "border-box"
   }
 
 const WorkPage = () => {

@@ -6,7 +6,8 @@ import processImage from "../images/about_viz.svg";
 const mainStyles = {
   color: "#292929",
   fontFamily: "neue-haas-grotesk-display, helvetica, sans-serif, serif",
-  width: "100%"
+  width: "100%",
+  boxSizing: "border-box"
 }
 
 const about = () => {
