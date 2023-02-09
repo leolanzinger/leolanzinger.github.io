@@ -58,6 +58,7 @@ const IndexPage = () => {
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     size.width = window.innerWidth;
     size.height = window.innerHeight;
     if (size.width < 848) {
@@ -99,7 +100,7 @@ const IndexPage = () => {
             <h2>Leonardo Lanzinger</h2>
             <h1>Digital Product Designer</h1>
             <p>
-              I am a designer with a focus on user research and design strategy. I am based in Berlin and I work as Principal Product Designer at Zalando, currently focusing on the circular second-hand proposition for Zalando's 50 million customers.
+              Hi! I am a designer with a focus on user research and design strategy. I am based in Berlin and I work as Principal Product Designer at Zalando, currently focusing on the circular second-hand proposition for Zalando's 50 million customers.
             </p>
             <p>
               My background is Computer Science and Human-Computer Interaction — and my guilty pleasures are React.js and the double diamond process.

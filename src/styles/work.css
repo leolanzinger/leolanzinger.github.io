@@ -32,7 +32,7 @@ date {
     font-size: 26px;
     line-height: normal;
     font-weight: 500;
-    letter-spacing: 0px;
+    letter-spacing: -0.5px;
 }
 
 .work ol, .work ul {
@@ -84,7 +84,7 @@ caption {
     }
 
     .work p {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .work h4 {

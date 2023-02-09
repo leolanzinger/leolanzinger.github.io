@@ -1,5 +1,6 @@
 import * as React from "react";
 import Img from "gatsby-image";
+import { useRef, useEffect, useState } from "react";
 import "../styles/style.css";
 import "../styles/work.css";
 import recomImage from "../images/recom.png";
@@ -13,6 +14,10 @@ const mainStyles = {
   }
 
 const WorkPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
     return (
       <div>
         <main style={mainStyles}>
@@ -38,7 +43,7 @@ const WorkPage = () => {
                       As Principal Product Designer, I am responsible for the customer experience of Zalando customers who shop and sell second-hand fashion, as well as the experience of customers using Zalando to recycle their old unwearable clothes.
                     </p>
                     <p>
-                      During my time in the team I lead several user research projects and applied both exploratory and evaluative methods, I designed solutions for customer problems at different scale of impact — both leading cross-team initiatives as well as working embedded in Recommerce agile development team.
+                      During my time in the team I led several user research projects and applied both exploratory and evaluative methods, I designed solutions for customer problems at different scales of impact — both leading cross-team initiatives as well as working embedded in the Recommerce agile development team.
                     </p>
                     <p>
                       I facilitated the definition of the team product roadmap by running workshops to build a service design blueprint, to evaluate customer journeys and to run ideations with multiple teams.

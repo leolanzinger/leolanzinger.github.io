@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useRef, useEffect, useState } from "react";
+import { useEffect } from "react";
 import "../styles/style.css";
 import processImage from "../images/about_viz.svg";
 
@@ -10,7 +10,12 @@ const mainStyles = {
   boxSizing: "border-box"
 }
 
-const about = () => {
+const About = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div>
       <main 
@@ -48,4 +53,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
