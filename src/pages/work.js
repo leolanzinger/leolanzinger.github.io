@@ -44,9 +44,7 @@ const WorkPage = () => {
                     </p>
                     <p>
                       During my time in the team I led several user research projects and applied both exploratory and evaluative methods, I designed solutions for customer problems at different scales of impact — both leading cross-team initiatives as well as working embedded in the Recommerce agile development team.
-                    </p>
-                    <p>
-                      I facilitated the definition of the team product roadmap by running workshops to build a service design blueprint, to evaluate customer journeys and to run ideations with multiple teams.
+                      Besides that, I also co-facilitated the definition of the product roadmap by running a series of Service Blueprint design workshops.
                     </p>
                   </div>
                   {/* <div className="box-1"></div> */}
@@ -109,6 +107,7 @@ const WorkPage = () => {
             <a href="mailto:leonardo.lanzinger@gmail.com" className="social-link">Email</a>
             <a href="https://twitter.com/Leo_Lanzinger" className="social-link">Twitter</a>
             <a href="https://www.linkedin.com/in/leonardolanzinger/" className="social-link">Linkedin</a>
+            <a href="https://github.com/leolanzinger" className="social-link">GitHub</a>
           </div>
         </div>
       </div>

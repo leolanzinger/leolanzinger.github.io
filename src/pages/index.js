@@ -96,7 +96,7 @@ const IndexPage = () => {
               </defs>
             </svg>
           </div>
-          <div className="box box-7 main">
+          <div className="box box-6 main">
             <h2>Leonardo Lanzinger</h2>
             <h1>Digital Product Designer</h1>
             <p>
@@ -118,6 +118,7 @@ const IndexPage = () => {
           <a href="mailto:leonardo.lanzinger@gmail.com" className="social-link">Email</a>
           <a href="https://twitter.com/Leo_Lanzinger" className="social-link">Twitter</a>
           <a href="https://www.linkedin.com/in/leonardolanzinger/" className="social-link">Linkedin</a>
+          <a href="https://github.com/leolanzinger" className="social-link">GitHub</a>
         </div>
       </div>
     </div>

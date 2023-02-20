@@ -47,6 +47,7 @@ const About = () => {
             <a href="mailto:leonardo.lanzinger@gmail.com" className="social-link">Email</a>
             <a href="https://twitter.com/Leo_Lanzinger" className="social-link">Twitter</a>
             <a href="https://www.linkedin.com/in/leonardolanzinger/" className="social-link">Linkedin</a>
+            <a href="https://github.com/leolanzinger" className="social-link">GitHub</a>
           </div>
         </div>
     </div>
