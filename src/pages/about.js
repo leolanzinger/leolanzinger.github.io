@@ -36,6 +36,7 @@ const About = () => {
             <p>After my studies, I joined Zalando — an online fashion e-commerce platform based in Berlin  — as a Creative Technologist for The Studio, a design unit working on new ideas and opportunity areas. While there, I transitioned into a Product Design role, mostly involved in customer research and early stage strategic design projects. In 2021 I joined the Recommerce team as an embedded product designer, working in a full staffed product team. You can read more about my work experience <a href="/work">here</a>.</p>
             <h4>Last, but not least</h4>
             <p>Beside work, I spend a lot of time playing and producing music with two projects: <a href="https://open.spotify.com/artist/6M2Pk85GotQvfbYCmWhEme?si=xBxP01xlRvOsKEW8bY7O2g">Bob and the Apple</a> and <a href="https://open.spotify.com/artist/42MCPv6PC71ywUF6cR5uHU?si=N_g3ZnxfQW-tQ3TILesGww">Julia Pígali</a>. I play mostly the bass guitar but I love to geek out on synthesisers too.</p>
+            <p>On my <a href="https://github.com/leolanzinger">GitHub</a> you can also find some failed or partially abandoned experiments with different technologies and programming languages. After all, one has to find creative ways to doodle around...</p>
           </div>
           <div className="box-3"></div>
         </div>
