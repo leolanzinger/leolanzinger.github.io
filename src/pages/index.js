@@ -1,6 +1,5 @@
 import * as React from "react";
 import { useRef, useEffect, useState } from "react";
-import Footer from "../components/footer";
 import "../styles/style.css";
 
 const mainStyles = {
@@ -58,7 +57,6 @@ const IndexPage = () => {
   }
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     size.width = window.innerWidth;
     size.height = window.innerHeight;
     if (size.width < 848) {
