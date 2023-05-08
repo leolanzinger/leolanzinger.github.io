@@ -97,19 +97,6 @@ p.big {
   }
 /* } */
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
 .name {
   font-size: 18px;
   font-weight: 600;
@@ -133,8 +120,12 @@ p.big {
   margin-bottom: 8px;
 }
 
-.work a, .about a, .contacts a {
+.work a, .about a {
   color: #FEFEFE;
+}
+
+.contacts a {
+  color: #111;
 }
 
 /* Layouts */
@@ -376,7 +367,7 @@ p.big {
   height: 100vh;
   padding-top: 160px;
   background-color: transparent;
-  color: #FEFEFE;
+  color: #0f261f;
 }
 
 /* ABOUT */
@@ -409,7 +400,7 @@ p.big {
 }
 
 @media screen and (min-width: 729px) {
-  .about .about-section p, .about .about-section a, .contacts a {
+  .about .about-section p, .about .about-section a {
     font-size: 18px;
   }
 }

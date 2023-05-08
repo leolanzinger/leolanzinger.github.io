@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import backArrow from "../assets/back_arrow.svg"
+import backArrowBlack from "../assets/back_arrow_black.svg"
 
 export default function Contacts() {
     return (
         <motion.main
             className="contacts__container"
             initial={{ backgroundColor: '#FEFEFE', paddingTop: '600px' }}
-            animate={{ backgroundColor: '#505423', paddingTop: '0px' }}
+            animate={{ backgroundColor: '#faed8f', paddingTop: '0px' }}
             exit={{ opacity: 0, paddingTop: '300px' }}
             transition={{ duration: 0.4 }}
         >
@@ -19,7 +19,7 @@ export default function Contacts() {
                 exit={{ opacity: 0, gap: '380px' }}
                 transition={{ duration: 0.2, delay: 0.2 }}
             >
-                <Link to={`/`}><img src={backArrow} alt="back-arrow" className="back-arrow" /></Link>
+                <Link to={`/`}><img src={backArrowBlack} alt="back-arrow" className="back-arrow" /></Link>
                 <h1>Contacts</h1>
                 <section className="contacts-section">
                     <p>Reach out at <a href="mailto:leonardo.lanzinger@gmail.com">leonardo.lanzinger@gmail.com</a></p>

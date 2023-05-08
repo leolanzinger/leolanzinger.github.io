@@ -9,7 +9,7 @@ export default function About() {
             className="about__container"
             key="about"
             initial={{ backgroundColor: '#FEFEFE', paddingTop: '600px' }}
-            animate={{ backgroundColor: '#00254F', paddingTop: '0px' }}
+            animate={{ backgroundColor: '#0f261f', paddingTop: '0px' }}
             exit={{ opacity: 0, paddingTop: '300px' }}
             transition={{ duration: 0.4 }}
         >
