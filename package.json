@@ -1,36 +1,35 @@
 {
-    "name": "leolanzinger.github.io",
-    "version": "1.0.0",
-    "private": true,
-    "description": "leolanzinger.github.io",
-    "author": "Leonardo Lanzinger",
-    "keywords": [
-        "gatsby"
-    ],
-    "scripts": {
-        "develop": "gatsby develop",
-        "start": "gatsby develop",
-        "build": "gatsby build",
-        "serve": "gatsby serve",
-        "clean": "gatsby clean",
-        "deploy": "gatsby build --prefix-paths && gh-pages -d public"
-    },
-    "dependencies": {
-        "@notionhq/client": "^2.2.3",
-        "gatsby": "^5.4.2",
-        "gatsby-image": "^3.11.0",
-        "gatsby-plugin-google-analytics": "^5.4.0",
-        "gatsby-plugin-image": "^3.5.0",
-        "gatsby-plugin-sharp": "^5.5.0",
-        "gatsby-remark-figure-caption": "^2.0.0",
-        "gatsby-remark-images": "^7.5.0",
-        "gatsby-source-filesystem": "^5.5.0",
-        "gatsby-transformer-remark": "^6.4.0",
-        "gatsby-transformer-sharp": "^5.5.0",
-        "react": "^18.1.0",
-        "react-dom": "^18.1.0"
-    },
-    "devDependencies": {
-        "gh-pages": "^4.0.0"
-    }
+  "name": "leolanzinger",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://www.leolanzinger.com",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "framer-motion": "^10.12.8",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.1",
+    "sort-by": "^0.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.0.0",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "gh-pages": "^5.0.0",
+    "vite": "^4.3.2"
+  }
 }
