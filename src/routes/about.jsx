@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import backArrow from "../assets/back_arrow.svg"
 import aboutViz from "../assets/about_viz.svg"
+import aboutPic from "../assets/about_pic.png"
 
 export default function About() {
     return (
@@ -24,10 +25,16 @@ export default function About() {
                 <Link to={`/`}><img src={backArrow} alt="back-arrow" className="back-arrow"/></Link>
                 <h1>About</h1>
                 <section className="about-section">
+                    <img src={aboutPic} alt="illustration of my workstation" />
                     <p>I am a Product Designer with a passion for tackling complex challenges through user centricity. I have a fond interest in circular design, in having a positive impact on people and the planet through the design practice and in enabling teams to be more user centric by sharing design tools and methods.</p>
-                    <p>My design process revolves around the so-called “double diamond” approach, but I also preach the “know the rules, break the rules” motto: that is, mastering frameworks and tools means to remain flexible, humble and always be ready to adapt to different contexts, teams and objectives.</p>
+                    <p>
+                        I have experience both researching and designing innovative solutions for unmet customer needs, as well as developing the customer experience of established products.
+                    </p>
+                    
+                    <p>My design process revolves around the so-called “double diamond” approach, but I value flexibility and also preach the “know the rules, break the rules” motto: that is, mastering frameworks and tools means to remain flexible, humble and always be ready to adapt to different contexts, teams and objectives.
+                    Long story short? I believe knowledge is adaptability — and so it’s the design process.</p>
+                    <p><a href="mailto:leonardo.lanzinger@gmail.com">Drop me a line</a> if you think my profile fits what you are looking for!</p>
                     <img src={aboutViz} alt="illustration of my design process" />
-                    <p>Long story short? I believe knowledge is adaptability — and so it’s the design process. Drop me a line if you think my profile fits what you are looking for!</p>
                 </section>
                 <section className="about-section">
                     <h2>A bit about my career so far</h2>

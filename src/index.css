@@ -154,6 +154,10 @@ p.big {
   .root.home {
     gap: 56px;
   }
+
+  .mobile-only {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 728px) {
@@ -163,6 +167,9 @@ p.big {
 
   .root.home {
     gap: 32px;
+  }
+  .desktop-only {
+    display: none !important;
   }
 }
 
@@ -240,8 +247,31 @@ p.big {
 @media screen and (min-width: 729px) {
   .links {
     align-items: flex-start;
-    gap: 17px;
+    gap: 8px;
+    margin-top: 8px;;
   }
+}
+
+.body-links-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.body-links {
+  padding-top: 24px;
+}
+
+.body-links:first-child a {
+  font-size: 32px;
+  margin-right: 32px;
+}
+
+.body-links:last-child a {
+  font-size: 32px;
+  margin-left: 32px;
 }
 
 .intro-body {

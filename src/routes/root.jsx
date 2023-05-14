@@ -24,7 +24,7 @@ export default function Root() {
                             <span className="services">User research</span>
                             <span className="services">Music & code</span>
                         </div>
-                        <div className="links">
+                        <div className="links mobile-only">
                             <Link to={`work`}>Work</Link>
                             <Link to={`/about`}>About</Link>
                             <Link to={`/contacts`}>Contacts</Link>
@@ -41,6 +41,17 @@ export default function Root() {
                     <p>
                     Currently open to work on projects with a focus on sustainability, circular business models or novel interaction patterns such as AI or VR.
                     </p>
+                    <div className="desktop-only body-links-wrapper">
+                        <div className="desktop-only body-links">
+                            <Link to={`work`}>Work</Link>
+                            <Link to={`/about`}>About</Link>
+                        </div>
+                        <div className="desktop-only body-links">
+                            <a href="mailto:leonardo.lanzinger@gmail.com">Email</a>
+                            <a href="https://www.linkedin.com/in/leonardolanzinger/">LinkedIn</a>
+                            <a href="https://www.twitter.com/leo_lanzinger">Twitter</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </motion.main>
