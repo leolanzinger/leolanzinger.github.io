@@ -4,7 +4,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"
-import './index.css'
+import './styles/reset.css'
+import './styles/index.css'
 import { AnimatePresence } from "framer-motion"
 import App from './App'
 
