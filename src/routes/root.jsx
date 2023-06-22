@@ -1,59 +1,44 @@
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import HeroImg from "../assets/hero_img.png"
+import Header from "../components/header"
 
 export default function Root() {
     return (
-        <motion.main
-            className="main__container"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-        >
-            <div className="root home">
-                <div className="intro-header">
-                    <img className="hero-image" src={HeroImg} alt="leonardo lanzinger illustration" />
-                    <span className="name">
-                        Leonardo Lanzinger
-                    </span>
-                    <div className="intro-links-wrapper">
-                        <div className="intro-services">
-                            <span className="services">Product design</span>
-                            <span className="services">Product strategy</span>
-                            <span className="services">User research</span>
-                            <span className="services">Music & code</span>
-                        </div>
-                        <div className="links mobile-only">
-                            <Link to={`work`}>Work</Link>
-                            <Link to={`/about`}>About</Link>
-                            <Link to={`/contacts`}>Contacts</Link>
-                        </div>
-                    </div>
+        <main className="main__container">
+            <Header page="home" />
+            <motion.div
+                className="container"
+                initial={{ opacity: 0, paddingTop: '80px'}}
+                animate={{ opacity: 1, paddingTop: '0px'}}
+                exit={{ opacity: 0, paddingTop: '80px'}}
+                transition={{ duration: 0.4 }}
+            >
+                <div className="column-main">
+                    <p className="big">
+                        A digital product designer, former creative technologist and aspiring design strategist.
+                    </p>
+                    <p className="big">
+                        Following user-centric design best practices, I help organisations uncover unknown opportunities and design customer experiences that are usable, useful and delightful.
+                    </p>
                 </div>
-                <div className="intro-body">
-                    <p>
-                    Italian born, Berlin based digital designer and technologist with a focus on user research and design strategy. Worked for the past five years at Zalando, focusing on the circular second-hand proposition for its 50 million customers.
-                    </p>
-                    <p>
-                    Graduated in Computer Science and Human-Computer Interaction Design from TU Berlin and UPS Paris.
-                    </p>
-                    <p>
-                    Currently open to work on projects with a focus on sustainability, circular business models or novel interaction patterns such as AI or VR.
-                    </p>
-                    <div className="desktop-only body-links-wrapper">
-                        <div className="desktop-only body-links">
-                            <Link to={`work`}>Work</Link>
-                            <Link to={`/about`}>About</Link>
-                        </div>
-                        <div className="desktop-only body-links">
-                            <a href="mailto:leonardo.lanzinger@gmail.com">Email</a>
-                            <a href="https://www.linkedin.com/in/leonardolanzinger/">LinkedIn</a>
-                            <a href="https://www.twitter.com/leo_lanzinger">Twitter</a>
-                        </div>
+                <motion.div
+                    className="column-description-wrapper"
+                    initial={{ opacity: 0, paddingTop: '80px'}}
+                    animate={{ opacity: 1, paddingTop: '0px'}}
+                    exit={{ opacity: 0, paddingTop: '80px'}}
+                    transition={{ duration: 0.4 }}
+                >
+                    <div className="divider"></div>
+                    <div className="column-description">
+                        <p>
+                            I worked for the past five years at <a href="https://www.zalando.de">Zalando</a>, most recently designing the circular second-hand proposition for its 50 million customers. Before that: I was a redesigned a voice recording tool at <a href="https://www.babbel.com">Babbel</a> and I studied Human-Computer Interaction Design and Computer Science in Berlin, Paris and Trento, Italy.
+                        </p>
+                        <p>
+                            I’m currently open to work: feel free to <a href="mailto:leonardo.lanzinger@gmail.com">send me an email</a>, or reach out via <a href="https://www.linkedin.com/in/leonardolanzinger/">LinkedIn</a> or <a href="https://www.twitter.com/leo_lanzinger">Twitter</a>.
+                        </p>
                     </div>
-                </div>
-            </div>
-        </motion.main>
+                </motion.div>
+            </motion.div>  
+        </main>
     )
 }
