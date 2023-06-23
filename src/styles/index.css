@@ -137,6 +137,10 @@ button {
   background-color: initial;
 }
 
+.main__container button {
+  color: #111;
+}
+
 @media screen and (max-width: 728px) {
   button {
     padding-top: 4px;
