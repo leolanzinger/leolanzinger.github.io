@@ -43,9 +43,9 @@ const Header = ({ page }) => {
                             <motion.div
                                 key="contact-links-desktop"
                                 className="header-link-wrapper contact-links desktop-only"
-                                initial={{ right: '-400px' }}
-                                animate={{ right: '24px' }}
-                                exit={{ right: '-400px', opacity: '0' }}
+                                initial={{ right: '-400px', opacity: "0%" }}
+                                animate={{ right: '24px', opacity: "100%" }}
+                                exit={{ right: '-400px', opacity: "0%" }}
                                 transition={{ duration: 0.2}}
                             >
                                 <button><a href="mailto:leonardo.lanzinger@gmail.com">leonardo.lanzinger@gmail.com</a></button>

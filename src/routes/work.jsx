@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import { motion, useAnimate, AnimatePresence } from "framer-motion"
-import recommerceImage from "../assets/recommerce.png"
-import theStudioImage from "../assets/thestudio.png"
-import babbelImage from "../assets/babbel.png"
+import recommerceImageDesktop from "../assets/recommerce_desktop.png"
+import recommerceImageMobile from "../assets/recommerce_mobile.png"
+import theStudioImageDesktop from "../assets/thestudio_desktop.png"
+import theStudioImageMobile from "../assets/thestudio_mobile.png"
+import babbelImageDesktop from "../assets/babbel_desktop.png"
+import babbelImageMobile from "../assets/babbel_mobile.png"
 import Header from "../components/header"
 import chevron from "../assets/chevron_down_light.svg"
 
@@ -44,7 +47,7 @@ export default function Work() {
     }
 
     const previewRecommerce = () => {
-        animateBg(background.current, {backgroundColor: "#040036"}, {duration: 0.4}, { ease: "linear" })
+        animateBg(background.current, {backgroundColor: "#625998"}, {duration: 0.4}, { ease: "linear" })
         // animateRecommerce(recommerce.current, {marginLeft: "20px"}, {duration: 0.4}, { ease: "linear" })
     }
     const previewStudio = () => {
@@ -92,23 +95,19 @@ export default function Work() {
                             {recommerceExpanded && (
                             <motion.div
                                 className="work-content"
-                                initial={{ height: '0px', opacity: '0%' }}
-                                animate={{ height: 'auto', opacity: '100%' }}
-                                exit={{ height: '0px', opacity: '0%' }}
-                                transition={{ duration: 0.2}}>
-                                <div className="work-content-text">
-                                    <p>Recommerce is the team responsible for Zalando Pre-owned and Sell services, enabling customers to buy and sell second hand fashion. The service is available through the main Zalando app in all European markets, reaching a customer base of over 50 million people.</p>
-                                    <p>Responsibilities:</p>
-                                    <ul>
-                                        <li>Design roadmap planning</li>
-                                        <li>User research initiatives</li>
-                                        <li>Conceptualisation and design of the new Recycle service</li>
-                                        <li>UX design for both Sell and Pre-owned customer journeys</li>
-                                        <li>Workshop moderation</li>
-                                    </ul>
+                                initial={{ opacity: '0%', height: "0px", marginBottom: "0px", gap: "0px" }}
+                                animate={{ opacity: '100%', height: "100%", marginBottom: "24px", gap: "24px"  }}
+                                exit={{ opacity: '0%', height: "0px", marginBottom: "0px", gap: "0px"  }}
+                                transition={{ duration: 0.2, ease: "easeOut"}}>
+                                <div
+                                    className="work-content-image">
+                                    <img src={recommerceImageDesktop} alt="Recommerce at Zalando" className="desktop-only" />
+                                    <img src={recommerceImageMobile} alt="Recommerce at Zalando" className="mobile-only" />
                                 </div>
-                                <div className="work-content-image">
-                                    <img src={recommerceImage} alt="recommerce" />
+                                <div 
+                                    className="work-content-text">
+                                    <p>Recommerce is the team responsible for Zalando Pre-owned and Sell services, enabling customers to buy and sell second hand fashion. The service is available through the main Zalando app in all European markets, reaching a customer base of over 50 million people.</p>
+                                    <p>My main responsibilities were planning the design roadmap, leading user research activities, UX design on the Sell and Pre-owned customer journeys, conceptualisation and design of a new Recycle service and workshop moderation.</p>
                                 </div>
                             </motion.div>)
                             }
@@ -131,16 +130,17 @@ export default function Work() {
                             {studioExpanded && (
                             <motion.div
                                 className="work-content"
-                                initial={{ height: '0px', opacity: '0%' }}
-                                animate={{ height: 'auto', opacity: '100%' }}
-                                exit={{ height: '0px', opacity: '0%' }}
-                                transition={{ duration: 0.2}}>
-                                <div className="work-content-text">
-                                    <p>The Studio is a multidisciplinary design team that supports Zalando teams on early stage projects with high ambiguity. Together with the team, I explored different strategic topics, including Zalando’s sustainability digital experience, connecting brick and mortar stores to the Zalando platform and visualising the partnership with Sephora and Nike.</p>
-                                    <p>Being a bit of a design process geek, I enjoyed creating and managing the design community methods toolkit, designed the first iteration of the design system contribution model and developed a Figma plugin to help colleagues create prototypes faster.</p>
-                                </div>
+                                initial={{ opacity: '0%', height: "0px", marginBottom: "0px", gap: "0px" }}
+                                animate={{ opacity: '100%', height: "100%", marginBottom: "24px", gap: "24px"  }}
+                                exit={{ opacity: '0%', height: "0px", marginBottom: "0px", gap: "0px"  }}
+                                transition={{ duration: 0.2, ease: "easeOut"}}>
                                 <div className="work-content-image">
-                                    <img src={theStudioImage} alt="The Studio" />
+                                    <img src={theStudioImageDesktop} alt="The Studio" className="desktop-only" />
+                                    <img src={theStudioImageMobile} alt="The Studio" className="mobile-only" />
+                                </div>
+                                <div className="work-content-text">
+                                    <p>The Studio is a multidisciplinary design team that supports Zalando teams on early stage projects with high ambiguity. Together with the team, I conceptualised and designed customer experiences for strategic topics, including Zalando’s sustainability digital experience, connecting brick and mortar stores to the Zalando platform and visualising the partnership with Sephora and Nike.</p>
+                                    <p>Being a bit of a design process geek, I enjoyed creating and managing the design community methods toolkit, designed the first iteration of the design system contribution model and developed a Figma plugin to help colleagues create prototypes faster.</p>
                                 </div>
                             </motion.div>)
                             }
@@ -163,16 +163,17 @@ export default function Work() {
                             {babbelExpanded && (
                             <motion.div
                                 className="work-content"
-                                initial={{ height: '0px', opacity: '0%' }}
-                                animate={{ height: 'auto', opacity: '100%' }}
-                                exit={{ height: '0px', opacity: '0%' }}
-                                transition={{ duration: 0.2}}>
+                                initial={{ opacity: '0%', height: "0px", marginBottom: "0px", gap: "0px" }}
+                                animate={{ opacity: '100%', height: "100%", marginBottom: "24px", gap: "24px"  }}
+                                exit={{ opacity: '0%', height: "0px", marginBottom: "0px", gap: "0px"  }}
+                                transition={{ duration: 0.2, ease: "easeOut"}}>
+                                <div className="work-content-image">
+                                    <img src={babbelImageDesktop} alt="Babbel" className="desktop-only" />
+                                    <img src={babbelImageMobile} alt="Babbel" className="mobile-only" />
+                                </div>
                                 <div className="work-content-text">
                                     <p>As an interaction designer intern, I redesigned the sound recording tool used by language experts to record audio material for Babbel online language courses, integrating it in a git-based CAT tool.</p>
                                     <p>As part of this internship, I wrote a thesis on the effect of a redesigned interfaces on its usability for users with different system experience and domain expertise.</p>
-                                </div>
-                                <div className="work-content-image">
-                                    <img src={babbelImage} alt="Babbel" />
                                 </div>
                             </motion.div>)
                             }

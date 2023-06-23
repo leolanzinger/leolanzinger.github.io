@@ -137,6 +137,13 @@ button {
   background-color: initial;
 }
 
+@media screen and (max-width: 728px) {
+  button {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
+
 button a {
   text-decoration: none;
   padding: 0 4px;
@@ -339,6 +346,7 @@ header .header-link-wrapper {
 @media screen and (max-width: 728px) {
   header .header-link-wrapper{
     position: static;
+    width: 100%;
   }
 
   header .header-link-wrapper-expanded {
@@ -350,10 +358,21 @@ header .header-link-wrapper {
 
   header .header-link-wrapper-expanded button {
     margin-top: 0;
+    margin-bottom: 8px;
   }
 
   header .header-link-wrapper-expanded button:first-of-type {
     margin-top: 12px;
+  }
+
+  header .links {
+    margin-bottom: 16px;
+  }
+
+  header button {
+    margin-bottom: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 }
 
@@ -555,8 +574,9 @@ main {
 .work-content {
   margin-bottom: 24px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
 }
 
 @media screen and (max-width: 728px) {
@@ -568,7 +588,21 @@ main {
 }
 
 .work-content-text {
-  max-width: 880px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.work-content-text p {
+  flex: 1;
+}
+
+@media screen and (max-width: 728px) {
+  .work-content-text {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .work-content-text p {
@@ -594,8 +628,7 @@ main {
 }
 
 .work-content-image img {
-  max-width: 400px;
-  width: 400px;
+  width: 100%;
 }
 
 @media screen and (max-width: 728px) {
