@@ -1,44 +1,79 @@
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import Header from "../components/header"
+import Portfolio from "../components/portfolio"
+import arrowUpRight from "../assets/arrow-up-right.svg"
+import recommerce from "../assets/recommerce_desktop.jpg"
+import thestudio from "../assets/thestudio_desktop.jpg"
+import babbel from "../assets/babbel_desktop.png"
+import neverOffline from "../assets/never-offline-desktop.jpg"
 
 export default function Root() {
     return (
         <main className="main__container">
-            <Header page="home" />
-            <motion.div
-                className="container"
-                initial={{ opacity: 0, paddingTop: '80px'}}
-                animate={{ opacity: 1, paddingTop: '0px'}}
-                exit={{ opacity: 0, paddingTop: '80px'}}
-                transition={{ duration: 0.4 }}
-            >
-                <div className="column-main">
-                    <p className="big">
-                        A digital product designer, former creative technologist and aspiring design strategist.
-                    </p>
-                    <p className="big">
-                        Following user-centric design best practices, I help organisations uncover unknown opportunities and design customer experiences that are usable, useful and delightful.
+            <div className="content">
+                <div>
+                    <span className="title">LEONARDO LANZINGER</span>
+                    <p className="big value-prop">
+                        Digital product designer, sometimes frontend developer and (part-time) musician
                     </p>
                 </div>
-                <motion.div
-                    className="column-description-wrapper"
-                    initial={{ opacity: 0, paddingTop: '80px'}}
-                    animate={{ opacity: 1, paddingTop: '0px'}}
-                    exit={{ opacity: 0, paddingTop: '80px'}}
-                    transition={{ duration: 0.4 }}
-                >
-                    <div className="divider"></div>
-                    <div className="column-description">
-                        <p>
-                            I worked for the past five years at <a href="https://www.zalando.de">Zalando</a>, most recently designing the circular second-hand proposition for its 50 million customers. Before that: I was a redesigned a voice recording tool at <a href="https://www.babbel.com">Babbel</a> and I studied Human-Computer Interaction Design and Computer Science in Berlin, Paris and Trento, Italy.
-                        </p>
-                        <p>
-                            I’m currently open to work: feel free to <a href="mailto:leonardo.lanzinger@gmail.com">send me an email</a>, or reach out via <a href="https://www.linkedin.com/in/leonardolanzinger/">LinkedIn</a> or <a href="https://www.twitter.com/leo_lanzinger">Twitter</a>.
+                <div className="bottom-content">
+                    <div className="content-links">
+                        <span className="section-title">Links</span>
+                        <a href="mailto:leonardo.lanzinger@gmail.com">EMAIL <img src={arrowUpRight}></img></a>
+                        <a href="https://www.linkedin.com/in/leonardolanzinger/">LINKEDIN <img src={arrowUpRight}></img></a>
+                        <a href="https://www.twitter.com/leo_lanzinger">TWITTER <img src={arrowUpRight}></img></a>
+                        <a href="https://adplist.org/mentors/leonardo-lanzinger">ADPLIST <img src={arrowUpRight}></img></a>
+                        <a href="https://github.com/leolanzinger">GITHUB <img src={arrowUpRight}></img></a>
+                    </div>
+                    <div className="content-paragraphs">
+                        <span className="section-title">About</span>
+                        <p className="small">
+                            Over the past 7 years, I worked at Zalando and Babbel on strategic and product development projects.</p>
+                        <p className="small">
+                            Following user centric best practices, I help teams discover unknown opportunities to design meaningful, usable and delightful user experiences.
                         </p>
                     </div>
-                </motion.div>
-            </motion.div>  
+                </div>
+            </div>
+            <div className="portfolio">
+                <div className="portfolio-column">
+                    <Portfolio
+                        title="Zalando Recommerce"
+                        timeline="2021 — 2023"
+                        content="ux design, user research, team enablement"
+                        role="principal product designer"
+                        theme="light"
+                        image={recommerce}
+                    />
+                    <Portfolio
+                        title="The Studio at Zalando"
+                        timeline="2017 — 2021"
+                        content="ux design, design strategy, design ops, prototyping"
+                        role="senior product designer / creative technologist"
+                        theme="dark"
+                        image={thestudio}
+                    />
+                </div>
+                <div className="portfolio-column">
+                    <Portfolio
+                        title="Babbel"
+                        timeline="2017"
+                        content="ux design, user testing, master thesis"
+                        role="interaction design intern"
+                        theme="light"
+                        image={babbel}
+                    />
+                    <Portfolio
+                        title="Never Offline"
+                        timeline="2022"
+                        content="content design, web design, visual branding"
+                        role="freelance designer"
+                        theme="light"
+                        image={neverOffline}
+                    />
+                </div>
+            </div>
         </main>
     )
 }
