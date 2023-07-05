@@ -2,14 +2,19 @@ import React, { useState, useEffect } from 'react'
 import { AnimatePresence, motion, useAnimate } from "framer-motion"
 import plusIconLight from "../assets/plus-icon-light.svg"
 import plusIconDark from "../assets/plus-icon-dark.svg"
+import linkExternalIconLight from "../assets/link-external-light.svg"
 
-const Portfolio = ({ title, role, timeline, content, image, theme }) => {
+const Portfolio = ({ title, role, timeline, content, image, theme, togglePopupMessage }) => {
 
     const [open, setOpen] = useState(false)
     const [scope, animate] = useAnimate()
 
-    const handleClick = () => {
+    const handleCloseClick = () => {
         setOpen(!open)
+    }
+
+    const handleInfoClick = () => {
+        togglePopupMessage(true)
     }
 
     useEffect(() => {
@@ -29,7 +34,7 @@ const Portfolio = ({ title, role, timeline, content, image, theme }) => {
                 ref={scope}
                 className={open ? "plus-icon open-icon" : "plus-icon"}
                 src={theme == "light" ? plusIconLight : plusIconDark}
-                onClick={handleClick} />
+                onClick={handleCloseClick} />
             <AnimatePresence>
             {
                 open &&
@@ -42,7 +47,14 @@ const Portfolio = ({ title, role, timeline, content, image, theme }) => {
                     <span className="portfolio-title">{title}</span>
                     <p>{role}</p>
                     <p>{timeline}</p>
-                    <span className="portfolio-content">{content}</span>
+                    <div className="portfolio-panel-bottom">
+                        <span className="portfolio-content">{content}</span>
+                        <img
+                            src={linkExternalIconLight}
+                            className="open-popup"
+                            onClick={handleInfoClick}
+                        />
+                    </div>
                 </motion.div>
             }
             </AnimatePresence>

@@ -122,6 +122,7 @@ a:focus::after {
   display: flex;
   flex-direction: row;
   height: 100vh;
+  overflow: scroll;
 }
 
 @media screen and (max-width: 728px) {
@@ -129,6 +130,10 @@ a:focus::after {
     flex-direction: column;
     height: auto;
   }
+}
+
+.non-scrollable {
+  overflow: hidden;
 }
 
 .content {
@@ -302,7 +307,6 @@ a:focus::after {
 
 .portfolio-panel .portfolio-content {
   margin-bottom: 0;
-  margin-top: 16px;
 }
 
 .portfolio-panel .portfolio-title {
@@ -322,4 +326,73 @@ a:focus::after {
 
 .portfolio-item .plus-icon.open-icon:hover {
   transform: rotate(45deg) !important;
+}
+
+.portfolio-panel-bottom {
+  margin-top: 16px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.portfolio-panel-bottom .open-popup {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+/* POPUP */
+.popup-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 60%);
+  z-index: 110;
+}
+
+.popup-panel {
+  position: fixed;
+  bottom: 0;
+  width: auto;
+  width: 728px;
+  margin-left: 50%;
+  left: -364px;
+  padding: 40px;
+  background-color: #FEFEFE;
+  z-index: 111;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 2px 2px 0 0;
+}
+
+@media screen and (max-width: 728px) {
+  .popup-panel {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px;
+    left: 0;
+    bottom: 0;
+    margin-left: 0;
+  }
+}
+
+.popup-panel .link-popup {
+  width: fit-content;
+}
+
+.popup-panel .link-popup img {
+  width: 12px;
+  height: 12px;
+}
+
+.popup-panel p {
+  line-height: 110%;
+  letter-spacing: 0;
 }

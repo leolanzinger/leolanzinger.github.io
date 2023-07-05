@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import { motion } from "framer-motion"
+import React, { useState } from 'react'
+import { AnimatePresence, motion } from "framer-motion"
 import Portfolio from "../components/portfolio"
 import arrowUpRight from "../assets/arrow-up-right.svg"
 import recommerce from "../assets/recommerce_desktop.jpg"
@@ -8,8 +8,40 @@ import babbel from "../assets/babbel_desktop.png"
 import neverOffline from "../assets/never-offline-desktop.jpg"
 
 export default function Root() {
+
+    const [open, setPopupOpen] = useState(false)
+
+    const handlePopupCallback = (msg) => {
+        setPopupOpen(msg)
+    }
+
     return (
-        <main className="main__container">
+        <main className={open ? "main__container non-scrollable" : "main__container"}>
+            <AnimatePresence>
+                {open &&
+                        <motion.div
+                            className="popup-container"
+                            key="popup-shade"
+                            onClick={() => setPopupOpen(false)}
+                            initial={{ opacity: '0%' }}
+                            animate={{ opacity: '100%' }}
+                            exit={{ opacity: '0%' }}>
+                                    <motion.div
+                                        key="popup-panel"
+                                        className="popup-panel"
+                                        initial={{ bottom: '-100%' }}
+                                        animate={{ bottom: '-1%' }}
+                                        exit={{ bottom: '-100%' }}
+                                        transition={{ ease: "easeOut", duration: 0.4}}
+                                    >
+                                        <p className="small">
+                                            HI THERE!  i am happy to share with you some more details and case studies from my past work via email. Feel free to contact me and request them.
+                                        </p>
+                                        <a className="link-popup" href="mailto:leonardo.lanzinger@gmail.com">EMAIL <img src={arrowUpRight}></img></a>
+                                    </motion.div>
+                        </motion.div>
+                    }
+                </AnimatePresence>
             <div className="content">
                 <div>
                     <span className="title">LEONARDO LANZINGER</span>
@@ -39,6 +71,7 @@ export default function Root() {
             <div className="portfolio">
                 <div className="portfolio-column">
                     <Portfolio
+                        togglePopupMessage={handlePopupCallback}
                         title="Zalando Recommerce"
                         timeline="2021 — 2023"
                         content="ux design, user research, team enablement"
@@ -47,6 +80,7 @@ export default function Root() {
                         image={recommerce}
                     />
                     <Portfolio
+                        togglePopupMessage={handlePopupCallback}
                         title="The Studio at Zalando"
                         timeline="2017 — 2021"
                         content="ux design, design strategy, design ops, prototyping"
@@ -57,6 +91,7 @@ export default function Root() {
                 </div>
                 <div className="portfolio-column">
                     <Portfolio
+                        togglePopupMessage={handlePopupCallback}
                         title="Babbel"
                         timeline="2017"
                         content="ux design, user testing, master thesis"
@@ -65,6 +100,7 @@ export default function Root() {
                         image={babbel}
                     />
                     <Portfolio
+                        togglePopupMessage={handlePopupCallback}
                         title="Never Offline"
                         timeline="2022"
                         content="content design, web design, visual branding"
