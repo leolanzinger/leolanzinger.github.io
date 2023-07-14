@@ -4,7 +4,7 @@ import plusIconLight from "../assets/plus-icon-light.svg"
 import plusIconDark from "../assets/plus-icon-dark.svg"
 import linkExternalIconLight from "../assets/link-external-light.svg"
 
-const Portfolio = ({ title, role, timeline, content, image, theme, togglePopupMessage }) => {
+const Portfolio = ({ title, role, timeline, content, image, theme, togglePopupMessage, popup }) => {
 
     const [open, setOpen] = useState(false)
     const [scope, animate] = useAnimate()
@@ -14,16 +14,15 @@ const Portfolio = ({ title, role, timeline, content, image, theme, togglePopupMe
     }
 
     const handleInfoClick = () => {
-        togglePopupMessage(true)
+        setOpen(!open)
+        togglePopupMessage(true, title)
     }
 
     useEffect(() => {
         if (open) {
-            console.log("rotate")
             animate(scope.current, { rotate: "45deg" })
         }
         else if (!open) {
-            console.log("rotate back")
             animate(scope.current, { rotate: "0" })
         }
     }, [open])
@@ -49,11 +48,14 @@ const Portfolio = ({ title, role, timeline, content, image, theme, togglePopupMe
                     <p>{timeline}</p>
                     <div className="portfolio-panel-bottom">
                         <span className="portfolio-content">{content}</span>
-                        <img
-                            src={linkExternalIconLight}
-                            className="open-popup"
-                            onClick={handleInfoClick}
-                        />
+                        {
+                            popup &&
+                            <img
+                                src={linkExternalIconLight}
+                                className="open-popup"
+                                onClick={handleInfoClick}
+                            />
+                        }
                     </div>
                 </motion.div>
             }

@@ -7,12 +7,32 @@ import thestudio from "../assets/thestudio_desktop.jpg"
 import babbel from "../assets/babbel_desktop.png"
 import neverOffline from "../assets/never-offline-desktop.jpg"
 
+const recommerceProjects = [
+    "Helped the team define its product roadmap by running discovery and evaluative user research and facilitating service design workshops.",
+    "Improved the overall user experience of customers who buy second hand clothes on Zalando.",
+    "Researched and designed the user experience for customers who want to recycle unwearable clothes with Zalando.",
+    "Redesigned the user journey for customers who want to sell their second hand clothes on Zalando, to reduce operational costs of Zalando Recommerce.",
+    "Designed the user journey for designer fashion enthusiast to shop second hand on Zalando."
+]
+
+const studioProjects = [
+    "Helped Zalando conneted retailers become sources of inspiration and advice for Zalando customers.",
+    "Explored how Zalando could become a local player in customers' neighbourhoods.",
+    "Visualised the future partnership between Zalando and Nike.",
+    "Experimented with interface composition rules to provide a dynamic experience on Zalando home.",
+    "Helped Zalando define its sustainability customer value proposition.",
+    "Designed the Zalando community design methods toolkit, a Zalando Figma Plugin and the design system governance model."
+]
+
+
 export default function Root() {
 
     const [open, setPopupOpen] = useState(false)
+    const [popupTitle, setPopupTitle] = useState("")
 
-    const handlePopupCallback = (msg) => {
-        setPopupOpen(msg)
+    const handlePopupCallback = (state, title) => {
+        setPopupOpen(state)
+        setPopupTitle(title)
     }
 
     return (
@@ -34,8 +54,25 @@ export default function Root() {
                                         exit={{ bottom: '-100%' }}
                                         transition={{ ease: "easeOut", duration: 0.4}}
                                     >
+                                        <div className="projects">
+                                            <h1>{popupTitle}, projects:</h1>
+                                            <ul>
+                                            {
+                                                popupTitle == "Zalando Recommerce" &&
+                                                recommerceProjects.map((project) => 
+                                                    <li><p className="small">{project}</p></li>
+                                                )
+                                            }
+                                            {
+                                                popupTitle == "The Studio at Zalando" &&
+                                                studioProjects.map((project) => 
+                                                    <li><p className="small">{project}</p></li>
+                                                )
+                                            }
+                                            </ul>
+                                        </div>
                                         <p className="small">
-                                            HI THERE!  i am happy to share with you some more details and case studies from my past work via email. Feel free to contact me and request them.
+                                            I am happy to share with you some more details and case studies from my past work via email. Feel free to contact me and request them.
                                         </p>
                                         <a className="link-popup" href="mailto:leonardo.lanzinger@gmail.com">EMAIL <img src={arrowUpRight}></img></a>
                                     </motion.div>
@@ -77,6 +114,7 @@ export default function Root() {
                         content="ux design, user research, team enablement"
                         role="principal product designer"
                         theme="light"
+                        popup={true}
                         image={recommerce}
                     />
                     <Portfolio
@@ -86,6 +124,7 @@ export default function Root() {
                         content="ux design, design strategy, design ops, prototyping"
                         role="senior product designer / creative technologist"
                         theme="dark"
+                        popup={true}
                         image={thestudio}
                     />
                 </div>
@@ -97,6 +136,7 @@ export default function Root() {
                         content="ux design, user testing, master thesis"
                         role="interaction design intern"
                         theme="light"
+                        popup={false}
                         image={babbel}
                     />
                     <Portfolio
@@ -106,6 +146,7 @@ export default function Root() {
                         content="content design, web design, visual branding"
                         role="freelance designer"
                         theme="light"
+                        popup={false}
                         image={neverOffline}
                     />
                 </div>
