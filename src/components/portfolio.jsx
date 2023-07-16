@@ -28,12 +28,17 @@ const Portfolio = ({ title, role, timeline, content, image, theme, togglePopupMe
     }, [open])
 
     return (
-        <div className="portfolio-item" style={{ backgroundImage : `url(${image})`}}>
+        <div
+            className="portfolio-item"
+            style={{ backgroundImage : `url(${image})`}}
+            onMouseEnter={() => {setOpen(true)}}
+            onMouseLeave={() => setOpen(false)}>
             <img
                 ref={scope}
                 className={open ? "plus-icon open-icon" : "plus-icon"}
                 src={theme == "light" ? plusIconLight : plusIconDark}
-                onClick={handleCloseClick} />
+                onClick={() => handleCloseClick()}
+                 />
             <AnimatePresence>
             {
                 open &&

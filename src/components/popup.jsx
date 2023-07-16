@@ -37,7 +37,7 @@ const Popup = ({ title, togglePopup }) => {
                 transition={{ ease: "easeOut", duration: 0.4}}
             >
                 <div className="projects">
-                    <h1>{title}, projects:</h1>
+                    <h1>{title}</h1>
                     <ul>
                     {
                         title == "Zalando Recommerce" &&
