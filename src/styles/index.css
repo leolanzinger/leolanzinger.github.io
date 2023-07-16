@@ -255,6 +255,7 @@ body {
   .chat-answer {
     max-width: 100%;
     width: 320px;
+    margin-bottom: 72px;
   }
 }
 
@@ -287,6 +288,7 @@ body {
   border-radius: 5px;
   font-size: 16px;
   background-color: transparent;
+  color: #222;
 }
 
 .chat-answer input[type="text"]:focus {
