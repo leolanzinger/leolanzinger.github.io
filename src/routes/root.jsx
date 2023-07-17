@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion, LayoutGroup } from "framer-motion"
 import {isDesktop, isMobile} from 'react-device-detect';
 
 import Portfolio from "../components/portfolio"
@@ -17,6 +17,7 @@ export default function Root() {
     const [open, setPopupOpen] = useState(false)
     const [portfolioOpen, setPortfolioOpen] = useState(false)
     const [popupTitle, setPopupTitle] = useState("")
+    const [portfolioInfo, setPortfolioInfo] = useState({state: false, position: 0})
     const [minutes, setMinutes] = useState(0);
     const [minuteString, setMinuteString] = useState("Now");
     const [showSecondChat, setshowSecondChat] = useState(false);
@@ -49,6 +50,19 @@ export default function Root() {
         }, 400);
         return () => {
             clearInterval(portfolioInterval);
+        }
+    }
+
+    const handlePortfolioInfoCallback = (pos) => {
+        portfolioRef.current.scrollIntoView({ behavior: 'smooth', block: 'start'});
+        if (!portfolioInfo.state) {
+            setPortfolioInfo({state: true, position: pos})
+        }
+        else {
+            if (pos == portfolioInfo.position)
+                setPortfolioInfo({state: false, position: pos})
+            else
+            setPortfolioInfo({state: true, position: pos})
         }
     }
 
@@ -85,12 +99,13 @@ export default function Root() {
                 <Popup title={popupTitle} togglePopup={setPopupOpen} />
             }
             </AnimatePresence>
+            <LayoutGroup>
                 <motion.div
-                    layout
+                    layout="position"
                     className="chat-container"
                     style={{justifyContent: portfolioOpen ? "flex-end" : "center"}}>
                     <motion.div
-                        layout
+                        layout="position"
                         className="chat-block">
                         <motion.div
                             className="chat-bubble"
@@ -115,7 +130,7 @@ export default function Root() {
                         </motion.div>
                         <motion.div
                             className="chat-avatar-container"
-                            layout
+                            layout="position"
                             initial={{ opacity: '0%'}}
                             animate={{ opacity: '100%'}}
                             transition={{ ease: "easeIn", duration: 0.4, delay: 2.8}}>
@@ -126,7 +141,7 @@ export default function Root() {
                     {
                         showSecondChat && 
                         <motion.div
-                        layout
+                        layout="position"
                         className="chat-block">
                             <motion.div
                                 className="chat-bubble"
@@ -163,7 +178,7 @@ export default function Root() {
                         showSecondChat && 
                         <motion.div
                             ref={chatAnswerRef}
-                            layout>
+                            layout="position">
                             <motion.div
                                 className="chat-answer"
                                 initial={{ opacity: '0%'}}
@@ -185,32 +200,51 @@ export default function Root() {
                     {
                         portfolioOpen &&
                         <motion.div
-                            layout
+                            layout="position"
                             className="portfolio-wrapper"
                             ref={portfolioRef}
                             initial={{ opacity: '0%'}}
                             animate={{ opacity: '100%'}}
                             exit={{ opacity: '0%'}}
-                            transition={{ ease: "easeIn", duration: 0.2}}>
-                            <img
+                            transition={{ ease: "easeIn", duration: 0.4}}>
+                            <motion.img
+                                layout="position"
                                 className="close-icon"
                                 alt="Close icon"
-                                onClick={() => setPortfolioOpen(false)}
+                                onClick={() => {
+                                    setPortfolioOpen(false);
+                                    setPortfolioInfo({state: false, position: 0})
+                                }}
                                 src={crossIcon}>
-                            </img>
-                            <div className="portfolio-container">
-                                <Portfolio
+                            </motion.img>
+                            <div className={portfolioInfo.state ? "portfolio-container expanded" : "portfolio-container"}>
+                                {
+                                    (!portfolioInfo.state ||
+                                    (portfolioInfo.state &&
+                                    portfolioInfo.position == 0)) &&
+                                    <AnimatePresence>
+                                        <Portfolio
+                                            togglePopupMessage={handlePopupCallback}
+                                            toggleInfo={handlePortfolioInfoCallback}
+                                            position={0}
+                                            title="Zalando Recommerce"
+                                            timeline="2021 — 2023"
+                                            content="ux design, user research, team enablement"
+                                            role="Principal product designer"
+                                            theme="light"
+                                            popup={true}
+                                            image={recommerce}
+                                        />
+                                    </AnimatePresence>
+                                }
+                                {
+                                    (!portfolioInfo.state ||
+                                    (portfolioInfo.state &&
+                                    portfolioInfo.position == 1)) &&
+                                    <AnimatePresence><Portfolio
                                     togglePopupMessage={handlePopupCallback}
-                                    title="Zalando Recommerce"
-                                    timeline="2021 — 2023"
-                                    content="ux design, user research, team enablement"
-                                    role="Principal product designer"
-                                    theme="light"
-                                    popup={true}
-                                    image={recommerce}
-                                />
-                                <Portfolio
-                                    togglePopupMessage={handlePopupCallback}
+                                    toggleInfo={handlePortfolioInfoCallback}
+                                    position={1}
                                     title="The Studio at Zalando"
                                     timeline="2017 — 2021"
                                     content="ux design, design strategy, design ops, prototyping"
@@ -218,55 +252,77 @@ export default function Root() {
                                     theme="dark"
                                     popup={true}
                                     image={thestudio}
-                                />
-                                <Portfolio
+                                    /></AnimatePresence>
+                                }
+                                {
+                                    (!portfolioInfo.state ||
+                                    (portfolioInfo.state &&
+                                    portfolioInfo.position == 2)) &&
+                                    <AnimatePresence><Portfolio
                                     togglePopupMessage={handlePopupCallback}
-                                    title="Babbel"
-                                    timeline="2017"
-                                    content="ux design, user testing, master thesis"
-                                    role="Interaction design intern"
-                                    theme="light"
-                                    popup={false}
-                                    image={babbel}
-                                />
-                                <Portfolio
+                                    toggleInfo={handlePortfolioInfoCallback}
+                                        position={2}
+                                        title="Babbel"
+                                        timeline="2017"
+                                        content="ux design, user testing, master thesis"
+                                        role="Interaction design intern"
+                                        theme="light"
+                                        popup={false}
+                                        image={babbel}
+                                    /></AnimatePresence>
+                                }
+                                {
+                                    (!portfolioInfo.state ||
+                                    (portfolioInfo.state &&
+                                    portfolioInfo.position == 3)) &&
+                                    <AnimatePresence><Portfolio
                                     togglePopupMessage={handlePopupCallback}
-                                    title="Never Offline"
-                                    timeline="2022"
-                                    content="content design, web design, visual branding"
-                                    role="Freelance designer"
-                                    theme="light"
-                                    popup={false}
-                                    image={neverOffline}
-                                />
+                                    toggleInfo={handlePortfolioInfoCallback}
+                                        position={3}
+                                        title="Never Offline"
+                                        timeline="2022"
+                                        content="content design, web design, visual branding"
+                                        role="Freelance designer"
+                                        theme="light"
+                                        popup={false}
+                                        image={neverOffline}
+                                    /></AnimatePresence>
+                                }
+                                {
+                                    portfolioInfo.state &&
+                                    <AnimatePresence>
+                                        <Popup position={portfolioInfo.position} />
+                                    </AnimatePresence>
+                                }
                             </div>
                         </motion.div>
                     }
                     </AnimatePresence>
                 </motion.div>
-            {
-                showFooter &&
-                isDesktop &&
-                <footer>
-                    <motion.div 
-                        initial={{ opacity: '0%'}}
-                        animate={{ opacity: '100%'}}
-                        transition={{ ease: "easeIn", duration: 0.6}}className="links">
-                        <a onClick={ () => setPortfolioOpen(!portfolioOpen)}>WORK</a>
-                        <a href="https://read.cv/leolanzinger">RESUME</a>
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: '0%'}}
-                        animate={{ opacity: '100%'}}
-                        transition={{ ease: "easeIn", duration: 0.6}}
-                        className="contacts">
-                        <a href="mailto:leonardo.lanzinger@gmail.com">EMAIL</a>
-                        <a href="https://www.linkedin.com/in/leonardolanzinger/">LINKEDIN</a>
-                        <a href="https://www.twitter.com/leo_lanzinger">TWITTER</a>
-                        <a href="https://adplist.org/mentors/leonardo-lanzinger">ADPLIST</a>
-                    </motion.div>
-                </footer>
-            }
+                {
+                    showFooter &&
+                    isDesktop &&
+                    <footer>
+                        <motion.div 
+                            initial={{ opacity: '0%'}}
+                            animate={{ opacity: '100%'}}
+                            transition={{ ease: "easeIn", duration: 0.6}}className="links">
+                            <a onClick={ () => setPortfolioOpen(!portfolioOpen)}>WORK</a>
+                            <a href="https://read.cv/leolanzinger">RESUME</a>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: '0%'}}
+                            animate={{ opacity: '100%'}}
+                            transition={{ ease: "easeIn", duration: 0.6}}
+                            className="contacts">
+                            <a href="mailto:leonardo.lanzinger@gmail.com">EMAIL</a>
+                            <a href="https://www.linkedin.com/in/leonardolanzinger/">LINKEDIN</a>
+                            <a href="https://www.twitter.com/leo_lanzinger">TWITTER</a>
+                            <a href="https://adplist.org/mentors/leonardo-lanzinger">ADPLIST</a>
+                        </motion.div>
+                    </footer>
+                }
+            </LayoutGroup>
         </main>
     )
 }

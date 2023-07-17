@@ -131,6 +131,7 @@ ul {
 /* LAYOUT */
 body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .main__container {
@@ -332,9 +333,10 @@ footer a {
 
 @media screen and (max-width: 728px) {
   .portfolio-wrapper {
-    width: 80%;
+    width: 320px;
     box-sizing: border-box;
-    padding: 24px 24px;
+    min-height: 100vh;
+    padding-top: 16px;
   }
 }
 
@@ -358,6 +360,26 @@ footer a {
   }
 }
 
+.portfolio-container.expanded {
+  align-items: flex-start;
+  gap: 32px;
+}
+
+@media screen and (max-width: 728px) {
+  .portfolio-container.expanded {
+    gap: 16px;
+  }
+}
+
+.portfolio-item-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
 .portfolio-item {
   height: 320px;
   width: 320px;
@@ -371,6 +393,8 @@ footer a {
   border-radius: 10px;
   box-shadow: 0 0.6021873017743928px 0.6021873017743928px -1.25px #0000002e, 0 2.288533303243457px 2.288533303243457px -2.5px #00000029, 0 10px 10px -3.75px #00000010, 0 1px 2px #00000014, 0 0 2px #0000000f;
   cursor: pointer;
+  transition: width 0.4s ease, height 0.4s ease;
+  background-position: center;
 }
 
 @media screen and (max-width: 728px) {
@@ -403,8 +427,44 @@ footer a {
   margin-bottom: 0;
 }
 
-.portfolio-panel .portfolio-title {
-  font-weight: 550;
+.portfolio-title {
+  display: inline-block;
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 95%;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 4px;
+  overflow: hidden;
+  transition: border-color 400ms;
+}
+
+.portfolio-title::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #111;
+	transition: opacity 400ms, transform 400ms;
+  opacity: 1;
+	transform: translate3d(-100%, 0, 0);
+}
+
+.portfolio-title.open::after {
+  opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+
+.portfolio-title.expanded {
+  opacity: 0;
+}
+
+@media screen and (max-width: 728px) {
+  .portfolio-title.expanded {
+    display: none;
+  }
 }
 
 .portfolio-item .plus-icon {
@@ -442,6 +502,12 @@ footer a {
   height: 20px;
   width: 20px;
   cursor: pointer;
+}
+
+.portfolio-chat-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 /* POPUP */

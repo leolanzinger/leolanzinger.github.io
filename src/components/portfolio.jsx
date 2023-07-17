@@ -1,71 +1,41 @@
 import React, { useState, useEffect } from 'react'
 import { AnimatePresence, motion, useAnimate } from "framer-motion"
-import plusIconLight from "../assets/plus-icon-light.svg"
-import plusIconDark from "../assets/plus-icon-dark.svg"
-import linkExternalIconLight from "../assets/link-external-light.svg"
 
-const Portfolio = ({ title, role, timeline, content, image, theme, togglePopupMessage, popup }) => {
+const Portfolio = ({ title, position, role, timeline, content, image, theme, togglePopupMessage, popup, toggleInfo }) => {
 
+    const [hover, setHover] = useState(false)
     const [open, setOpen] = useState(false)
-    const [scope, animate] = useAnimate()
-
-    const handleCloseClick = () => {
-        setOpen(!open)
-    }
 
     const handleInfoClick = () => {
         setOpen(!open)
-        togglePopupMessage(true, title)
+        toggleInfo(position)
     }
 
-    useEffect(() => {
-        if (open) {
-            animate(scope.current, { rotate: "45deg" })
-        }
-        else if (!open) {
-            animate(scope.current, { rotate: "0" })
-        }
-    }, [open])
-
     return (
-        <div
-            className="portfolio-item"
-            style={{ backgroundImage : `url(${image})`}}
-            onMouseEnter={() => {setOpen(true)}}
-            onMouseLeave={() => setOpen(false)}>
-            <img
-                ref={scope}
-                className={open ? "plus-icon open-icon" : "plus-icon"}
-                src={theme == "light" ? plusIconLight : plusIconDark}
-                onClick={() => handleCloseClick()}
-                 />
-            <AnimatePresence>
+        <motion.div
+            initial={{ opacity: '0%'}}
+            animate={{ opacity: '100%'}}
+            exit={{ opacity: '0%'}}
+            transition={{ ease: "easeIn", duration: 0.2}}
+            className="portfolio-item-frame">
+            <motion.div
+                layout="position"
+                transition={{ duration: 0.4 }}
+                className="portfolio-item"
+                style={{ backgroundImage : `url(${image})`}}
+                onMouseEnter={() => {setHover(true)}}
+                onMouseLeave={() => {setHover(false)}}
+                onClick={() => {handleInfoClick()}}
+                >
+            </motion.div>
             {
-                open &&
-                <motion.div
-                    className="portfolio-panel"
-                    key="portfolio-item"
-                    initial={{ marginBottom: '-166.39px' }}
-                    animate={{ marginBottom: '0px' }}
-                    exit={{ marginBottom: '-166.39px' }}>
-                    <span className="portfolio-title">{title}</span>
-                    <p>{role}</p>
-                    <p>{timeline}</p>
-                    <div className="portfolio-panel-bottom">
-                        <span className="portfolio-content">{content}</span>
-                        {
-                            popup &&
-                            <img
-                                src={linkExternalIconLight}
-                                className="open-popup"
-                                onClick={handleInfoClick}
-                            />
-                        }
-                    </div>
-                </motion.div>
+                open ?
+                <span className="portfolio-title expanded">{title}</span>
+                :
+                <span className={hover ? "portfolio-title open" : "portfolio-title"}>{title}</span>
+
             }
-            </AnimatePresence>
-        </div>
+        </motion.div>
     )
 }
 
