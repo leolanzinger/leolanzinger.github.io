@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { AnimatePresence, motion, useAnimate } from "framer-motion"
 
-const Portfolio = ({ title, position, role, timeline, content, image, theme, togglePopupMessage, popup, toggleInfo }) => {
+const Portfolio = ({ title, position, image, toggleInfo }) => {
 
     const [hover, setHover] = useState(false)
     const [open, setOpen] = useState(false)
@@ -20,21 +20,17 @@ const Portfolio = ({ title, position, role, timeline, content, image, theme, tog
             className="portfolio-item-frame">
             <motion.div
                 layout="position"
+                onMouseEnter={() => {setHover(true)}}
+                onMouseLeave={() => {setHover(false)}}>
+            <div
                 transition={{ duration: 0.4 }}
                 className="portfolio-item"
                 style={{ backgroundImage : `url(${image})`}}
-                onMouseEnter={() => {setHover(true)}}
-                onMouseLeave={() => {setHover(false)}}
                 onClick={() => {handleInfoClick()}}
                 >
+            </div>
+            <span layout="position" className={hover ? "portfolio-title open" : "portfolio-title"}>{title}</span>
             </motion.div>
-            {
-                open ?
-                <span className="portfolio-title expanded">{title}</span>
-                :
-                <span className={hover ? "portfolio-title open" : "portfolio-title"}>{title}</span>
-
-            }
         </motion.div>
     )
 }

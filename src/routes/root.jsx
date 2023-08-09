@@ -3,7 +3,7 @@ import { AnimatePresence, motion, LayoutGroup } from "framer-motion"
 import {isDesktop, isMobile} from 'react-device-detect';
 
 import Portfolio from "../components/portfolio"
-import Popup from "../components/popup"
+import ProjectChat from "../components/projectChat"
 import profilePic from "../assets/profile_pic.jpg"
 import backArrow from "../assets/back_arrow_black.svg"
 import crossIcon from "../assets/cross_icon.svg"
@@ -14,9 +14,7 @@ import neverOffline from "../assets/never-offline-desktop.jpg"
 
 export default function Root() {
 
-    const [open, setPopupOpen] = useState(false)
     const [portfolioOpen, setPortfolioOpen] = useState(false)
-    const [popupTitle, setPopupTitle] = useState("")
     const [portfolioInfo, setPortfolioInfo] = useState({state: false, position: 0})
     const [minutes, setMinutes] = useState(0);
     const [minuteString, setMinuteString] = useState("Now");
@@ -27,11 +25,6 @@ export default function Root() {
     const chatAnswerRef = useRef(null);
     const portfolioRef = useRef(null);
     const [inputValue, setInputValue] = useState('');
-
-    const handlePopupCallback = (state, title) => {
-        setPopupOpen(state)
-        setPopupTitle(title)
-    }
 
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
@@ -93,12 +86,6 @@ export default function Root() {
 
     return (
         <main className="main__container">
-            <AnimatePresence>
-            {
-                open &&
-                <Popup title={popupTitle} togglePopup={setPopupOpen} />
-            }
-            </AnimatePresence>
             <LayoutGroup>
                 <motion.div
                     layout="position"
@@ -200,7 +187,6 @@ export default function Root() {
                     {
                         portfolioOpen &&
                         <motion.div
-                            layout="position"
                             className="portfolio-wrapper"
                             ref={portfolioRef}
                             initial={{ opacity: '0%'}}
@@ -212,8 +198,13 @@ export default function Root() {
                                 className="close-icon"
                                 alt="Close icon"
                                 onClick={() => {
-                                    setPortfolioOpen(false);
-                                    setPortfolioInfo({state: false, position: 0})
+                                    if (portfolioInfo.state) {
+                                        setPortfolioInfo({state: false, position: 0})
+                                    }
+                                    else {
+                                        setPortfolioOpen(false);
+                                        setPortfolioInfo({state: false, position: 0})
+                                    }
                                 }}
                                 src={crossIcon}>
                             </motion.img>
@@ -224,7 +215,6 @@ export default function Root() {
                                     portfolioInfo.position == 0)) &&
                                     <AnimatePresence>
                                         <Portfolio
-                                            togglePopupMessage={handlePopupCallback}
                                             toggleInfo={handlePortfolioInfoCallback}
                                             position={0}
                                             title="Zalando Recommerce"
@@ -242,7 +232,6 @@ export default function Root() {
                                     (portfolioInfo.state &&
                                     portfolioInfo.position == 1)) &&
                                     <AnimatePresence><Portfolio
-                                    togglePopupMessage={handlePopupCallback}
                                     toggleInfo={handlePortfolioInfoCallback}
                                     position={1}
                                     title="The Studio at Zalando"
@@ -259,7 +248,6 @@ export default function Root() {
                                     (portfolioInfo.state &&
                                     portfolioInfo.position == 2)) &&
                                     <AnimatePresence><Portfolio
-                                    togglePopupMessage={handlePopupCallback}
                                     toggleInfo={handlePortfolioInfoCallback}
                                         position={2}
                                         title="Babbel"
@@ -276,7 +264,6 @@ export default function Root() {
                                     (portfolioInfo.state &&
                                     portfolioInfo.position == 3)) &&
                                     <AnimatePresence><Portfolio
-                                    togglePopupMessage={handlePopupCallback}
                                     toggleInfo={handlePortfolioInfoCallback}
                                         position={3}
                                         title="Never Offline"
@@ -288,12 +275,11 @@ export default function Root() {
                                         image={neverOffline}
                                     /></AnimatePresence>
                                 }
+                                <AnimatePresence>
                                 {
-                                    portfolioInfo.state &&
-                                    <AnimatePresence>
-                                        <Popup position={portfolioInfo.position} />
-                                    </AnimatePresence>
+                                    portfolioInfo.state && <AnimatePresence><ProjectChat position={portfolioInfo.position} /></AnimatePresence>
                                 }
+                                </AnimatePresence>
                             </div>
                         </motion.div>
                     }

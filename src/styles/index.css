@@ -159,13 +159,15 @@ body {
   box-sizing: border-box;
   width: 100vw;
   min-height: 100vh;
-  bottom: 0;
+  bottom: auto;
   left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
   gap: 16px;
+  padding-top: 24px;
 }
 @media screen and (max-width: 728px) {
   .chat-container {
@@ -295,7 +297,7 @@ body {
 
 /* FOOTER */
 footer {
-  position: absolute;
+  position: fixed;
   box-sizing: border-box;
   bottom: 0;
   width: 100vw;
@@ -347,7 +349,6 @@ footer a {
   justify-content: center;
   gap: 8px;
   margin: 24px 40px 120px;
-  overflow: hidden;
 }
 
 @media screen and (max-width: 728px) {
@@ -381,9 +382,10 @@ footer a {
 }
 
 .portfolio-item {
-  height: 320px;
-  width: 320px;
+  height: 240px;
+  width: 240px;
   background-size: contain;
+  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -508,77 +510,4 @@ footer a {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-/* POPUP */
-.popup-container {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0,0,0, 60%);
-  z-index: 110;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.popup-panel {
-  position: fixed;
-  bottom: 0;
-  width: auto;
-  padding: 48px 64px;
-  background-color: #FEFEFE;
-  z-index: 111;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  border-radius: 2px 2px 0 0;
-}
-
-@media screen and (max-width: 728px) {
-  .popup-panel {
-    width: 100%;
-    max-width: 100%;
-    padding: 24px;
-    left: 0;
-    bottom: 0;
-    margin-left: 0;
-  }
-}
-
-.popup-panel .link-popup {
-  width: fit-content;
-}
-
-.popup-panel .link-popup img {
-  width: 12px;
-  height: 12px;
-}
-
-.popup-panel p {
-  line-height: 110%;
-  letter-spacing: 0;
-}
-
-.popup-panel .projects {
-  margin-bottom: 0px;
-}
-
-@media screen and (max-width: 728px) {
-  .popup-panel .projects {
-    margin-bottom: 0px;
-  }
-}
-
-.popup-panel .projects h1 {
-  margin-bottom: 16px;
-}
-
-.popup-panel .projects p {
-  line-height: 110%;
-  letter-spacing: 0;
-  margin-bottom: 8px;
 }

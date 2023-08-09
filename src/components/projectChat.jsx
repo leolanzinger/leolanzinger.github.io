@@ -23,33 +23,57 @@ const freelance = [
 ]
 
 const strings = [recommerce, studio, babbel, freelance]
+const titles = ["recommerce", "studio", "babbel", "freelance"]
 
-const Popup = ({ position }) => {
+const animationList = {
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 0.8,
+            staggerChildren: 0.4,
+            delayChildren: 0.4
+        }
+    },
+    hidden: {
+        opacity: 0,
+        transition: {
+            duration: 0.8,
+            staggerChildren: 0.4,
+            delayChildren: 0.4
+        }
+    }
+}
+
+const ProjectChat = ({ position }) => {
     return (
-        <div className="portfolio-chat-wrapper">
-            {strings[position].map((string) => {
+        <AnimatePresence>
+        <motion.div
+            key={titles[position]}
+            variants={animationList}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            className="portfolio-chat-wrapper">
+            {strings[position].map((string, i) => {
                 return(
                 <motion.div
+                    key={i}
+                    variants={animationList}
                     layout="position"
                     className="chat-block">
                     <motion.div
-                        className="chat-bubble"
-                        initial={{ opacity: '0%'}}
-                        animate={{ opacity: '100%'}}
-                        transition={{ ease: "easeIn", duration: 0.4, delay: 0.4}}>
+                        className="chat-bubble">
                         {string}
                     </motion.div>
                     <motion.div
-                        className="chat-avatar-container"
-                        initial={{ opacity: '0%'}}
-                        animate={{ opacity: '100%'}}
-                        transition={{ ease: "easeIn", duration: 0.4, delay: 0.4}}>
+                        className="chat-avatar-container">
                         <img src={profilePic} alt="Picture of Leonardo Lanzinger" className="chat-author"></img>
                     </motion.div>
                 </motion.div>)
             })}
-        </div>
+        </motion.div>
+        </AnimatePresence>
     )
 }
 
-export default Popup
+export default ProjectChat
