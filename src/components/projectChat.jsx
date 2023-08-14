@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { AnimatePresence, motion, useAnimate } from "framer-motion"
 import profilePic from "../assets/profile_pic.jpg"
+import { Dialog } from '@headlessui/react'
 
 const recommerce = [
     "From 2021 to 2023 I was a senior (then principal) product designer at Zalando Recommerce, working on second hand fashion journeys.",
@@ -20,6 +21,10 @@ const babbel = [
 const freelance = [
     "In 2022 I designed the landing page of Never Offline, a social media consulting agency based in Berlin.",
     "During the project, I helped them define their onsite content strategy and translated their brand identity to the page."
+]
+
+const portfolio = [
+    "Interested in reading detailed case studies from my past work?"
 ]
 
 const strings = [recommerce, studio, babbel, freelance]
@@ -45,34 +50,85 @@ const animationList = {
 }
 
 const ProjectChat = ({ position }) => {
+    const portfolioRef = useRef(null)
+    const passRef = useRef(null)
+    let [isOpen, setIsOpen] = useState(false)
+
+    useEffect(() => {
+        const portfolioTimeout = setTimeout(() => {
+            portfolioRef.current.scrollIntoView({ behavior: 'smooth', block: 'nearest'});
+        }, 1800);
+        return () => {
+            clearTimeout(portfolioTimeout);
+        };
+    }, []);
+
+    const handlePortfolioClick = () => {
+        setIsOpen(true)
+    }
+
+    const openPortfolio = () => {
+        if (passRef.current.value == "lanzinger") {
+            location.href = "https://leolanzinger-portfolio.framer.website/"
+        }
+        else {
+            window.alert("Wrong password, sorry.")
+        }
+    }
+
     return (
-        <AnimatePresence>
-        <motion.div
-            key={titles[position]}
-            variants={animationList}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            className="portfolio-chat-wrapper">
-            {strings[position].map((string, i) => {
-                return(
+        <div>
+             <div className={isOpen ? "dialog-container open" : "dialog-container closed "}>
+                <div className="dialog-bg" aria-hidden="true" onClick={() => setIsOpen(false)} />
+                <div className="dialog-panel">
+                    <label for="pwd">Password:</label>
+                    <input ref={passRef} type="password" id="pwd" name="pwd" />
+                    <button onClick={() => openPortfolio()}>Open</button>
+                </div>
+            </div>
+            <AnimatePresence>
                 <motion.div
-                    key={i}
+                    key={titles[position]}
                     variants={animationList}
-                    layout="position"
-                    className="chat-block">
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                    className="portfolio-chat-wrapper">
+                    {strings[position].map((string, i) => {
+                        return(
+                        <motion.div
+                            key={i}
+                            variants={animationList}
+                            layout="position"
+                            className="chat-block">
+                            <motion.div
+                                className="chat-bubble">
+                                {string}
+                            </motion.div>
+                            <motion.div
+                                className="chat-avatar-container">
+                                <img src={profilePic} alt="Picture of Leonardo Lanzinger" className="chat-author"></img>
+                            </motion.div>
+                        </motion.div>)
+                    })}
                     <motion.div
-                        className="chat-bubble">
-                        {string}
+                        key="portfolio"
+                        variants={animationList}
+                        layout="position"
+                        className="chat-block"
+                        ref={portfolioRef}>
+                        <motion.div
+                            className="chat-bubble">
+                            {portfolio} <span className="clickable" onClick={() => handlePortfolioClick()}>Click here.</span>
+                        </motion.div>
+                        <motion.div
+                            className="chat-avatar-container">
+                            <img src={profilePic} alt="Picture of Leonardo Lanzinger" className="chat-author"></img>
+                        </motion.div>
                     </motion.div>
-                    <motion.div
-                        className="chat-avatar-container">
-                        <img src={profilePic} alt="Picture of Leonardo Lanzinger" className="chat-author"></img>
-                    </motion.div>
-                </motion.div>)
-            })}
-        </motion.div>
-        </AnimatePresence>
+                </motion.div>
+            </AnimatePresence>
+        </div>
     )
 }
 

@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.16",
     "framer-motion": "^10.12.8",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
