@@ -556,11 +556,12 @@ footer a {
 
 .dialog-panel {
   position: absolute;
+  box-sizing: border-box;
   top: 40%;
   left: 50%;
-  width: 200px;
+  width: 240px;
   height: fit-content;
-  margin-left: -100px;
+  margin-left: -120px;
   z-index: 100;
   background-color: #FEFEFE;
   box-shadow: 0 2px 20px 4px #EEE;

@@ -20,6 +20,7 @@ const Portfolio = ({ title, position, image, toggleInfo }) => {
             className="portfolio-item-frame">
             <motion.div
                 layout="position"
+                style={{width: "100%"}}
                 onMouseEnter={() => {setHover(true)}}
                 onMouseLeave={() => {setHover(false)}}>
             <div
