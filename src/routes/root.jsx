@@ -10,7 +10,7 @@ import crossIcon from "../assets/cross_icon.svg"
 import recommerce from "../assets/recommerce_desktop.jpg"
 import thestudio from "../assets/thestudio_desktop.jpg"
 import babbel from "../assets/babbel_desktop.png"
-import neverOffline from "../assets/never-offline-desktop.jpg"
+import freelance from "../assets/freelance.jpg"
 
 export default function Root() {
 
@@ -106,14 +106,14 @@ export default function Root() {
                             initial={{ opacity: '0%'}}
                             animate={{ opacity: '100%'}}
                             transition={{ ease: "easeIn", duration: 0.4, delay: 1.6}}>
-                            Over the past 7 years, I worked at <a href="https://www.zalando.de">Zalando</a> and <a href="https://www.babbel.com">Babbel</a> on strategic and product development projects.
+                            Over the past 7 years, I worked at <a href="https://www.zalando.de">Zalando</a> and <a href="https://www.babbel.com">Babbel</a> on strategic and product design projects. I am currently freelancing with <a href="https://www.swifty.so">Swifty</a> and developing <a href="https://www.thementorexchange.com">The Mentor Exchange</a>.
                         </motion.div>
                         <motion.div
                             className="chat-bubble"
                             initial={{ opacity: '0%'}}
                             animate={{ opacity: '100%'}}
                             transition={{ ease: "easeIn", duration: 0.4, delay: 2.4}}>
-                            I run discovery projects to uncover new opportunities to design meaningful, usable and delightful digital user experiences.
+                            I run discovery projects that uncover new opportunities to provide value to customers and businesses and I design the customer experience to deliver that.
                         </motion.div>
                         <motion.div
                             className="chat-avatar-container"
@@ -246,6 +246,23 @@ export default function Root() {
                                 {
                                     (!portfolioInfo.state ||
                                     (portfolioInfo.state &&
+                                    portfolioInfo.position == 3)) &&
+                                    <AnimatePresence><Portfolio
+                                    toggleInfo={handlePortfolioInfoCallback}
+                                        position={3}
+                                        title="Freelance product design"
+                                        timeline="2022 - now"
+                                        content="product, product strategy, content design, UI design, branding"
+                                        role="Product designer"
+                                        theme="light"
+                                        popup={false}
+                                        image={freelance}
+                                    /></AnimatePresence>
+                                }
+                                <AnimatePresence>
+                                {
+                                    (!portfolioInfo.state ||
+                                    (portfolioInfo.state &&
                                     portfolioInfo.position == 2)) &&
                                     <AnimatePresence><Portfolio
                                     toggleInfo={handlePortfolioInfoCallback}
@@ -259,23 +276,6 @@ export default function Root() {
                                         image={babbel}
                                     /></AnimatePresence>
                                 }
-                                {
-                                    (!portfolioInfo.state ||
-                                    (portfolioInfo.state &&
-                                    portfolioInfo.position == 3)) &&
-                                    <AnimatePresence><Portfolio
-                                    toggleInfo={handlePortfolioInfoCallback}
-                                        position={3}
-                                        title="Never Offline"
-                                        timeline="2022"
-                                        content="content design, web design, visual branding"
-                                        role="Freelance designer"
-                                        theme="light"
-                                        popup={false}
-                                        image={neverOffline}
-                                    /></AnimatePresence>
-                                }
-                                <AnimatePresence>
                                 {
                                     portfolioInfo.state && <AnimatePresence><ProjectChat position={portfolioInfo.position} /></AnimatePresence>
                                 }
