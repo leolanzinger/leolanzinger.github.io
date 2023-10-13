@@ -106,7 +106,7 @@ export default function Root() {
                             initial={{ opacity: '0%'}}
                             animate={{ opacity: '100%'}}
                             transition={{ ease: "easeIn", duration: 0.4, delay: 1.6}}>
-                            Over the past 7 years, I worked at <a href="https://www.zalando.de">Zalando</a> and <a href="https://www.babbel.com">Babbel</a> on strategic and product design projects. I am currently freelancing with <a href="https://www.swifty.so">Swifty</a> and developing <a href="https://www.thementorexchange.com">The Mentor Exchange</a>.
+                            Over the past 7 years, I worked at <a href="https://www.zalando.de">Zalando</a> and <a href="https://www.babbel.com">Babbel</a> on strategic and product design projects. I am currently freelancing and developing <a href="https://www.thementorexchange.com">The Mentor Exchange</a>.
                         </motion.div>
                         <motion.div
                             className="chat-bubble"

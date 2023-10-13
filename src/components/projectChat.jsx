@@ -20,7 +20,7 @@ const babbel = [
 
 const freelance = [
     "Over the past year I have been working as a freelance product designer, mostly helping out small businesses and startup go from 0 to 1.",
-    "Currenlty, I am working with Swifty — a Lufthansa-backed travel startup - designing their product vision and design their product, and with The Mentor Exchange, as a member of the founding team focusing mostly on user research, service design and branding. Are you interested in reading detailed case studies from my past work?"
+    "Currenlty, I am working with The Mentor Exchange, as a member of the founding team focusing mostly on user research, service design and branding. Are you interested in reading detailed case studies from my past work?"
 ]
 
 const portfolio = [
